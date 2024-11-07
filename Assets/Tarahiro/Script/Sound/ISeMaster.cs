@@ -9,7 +9,6 @@ namespace Tarahiro.Sound
         /// <summary>
         /// このデータのIDを取得します。
         /// </summary>
-        string Id { get; }
 
         string SePath{ get; }
     }
