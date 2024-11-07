@@ -19,6 +19,12 @@ namespace gaw241110.inject
             Container.BindInterfacesTo<CookieView>().FromComponentInHierarchy().AsSingle();
             Container.BindInterfacesTo<CookieModel>().AsSingle();
             Container.BindInterfacesTo<CookiePresenter>().AsSingle();
+
+            Container.BindInterfacesTo<SeaManager>().AsSingle();
+
+
+
+
             Container.BindInterfacesTo<GameManager>().AsSingle();
 
             Container.BindInitializableExecutionOrder<GameManager>(-100);
