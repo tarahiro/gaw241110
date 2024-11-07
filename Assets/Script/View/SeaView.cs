@@ -11,11 +11,17 @@ using Zenject;
 
 namespace gaw241110.view
 {
-    public class SeaView : MonoBehaviour, ISeaView
+    public class SeaView : MonoBehaviour, ISeaView, IGameOverCheckableView
     {
+        [Inject] IGameOverableView _gameOverableView;
+
         [SerializeField] GameObject _sea;
 
         Vector3 _initialSeaPosition;
+
+
+        public event Action GameOvered;
+
 
         void Start()
         {
@@ -25,6 +31,12 @@ namespace gaw241110.view
         public void RiseSea(float seaLevel)
         {
             _sea.transform.position = _initialSeaPosition + seaLevel * Vector3.up;
+
+            if(_sea.transform.position.y > _gameOverableView.GameOverableHeight)
+            {
+                Log.DebugAssert(GameOvered != null);
+                GameOvered?.Invoke();
+            }
         }
     }
 }

@@ -15,7 +15,11 @@ namespace gaw241110.inject
     {
         public override void InstallBindings()
         {
+
+            Container.BindInterfacesTo<GameOverPresenter>().AsSingle();
+
             Container.BindInterfacesTo<StackedCookieView>().FromComponentInHierarchy().AsSingle();
+            Container.BindInterfacesTo<CatView>().FromComponentInHierarchy().AsSingle();
             Container.BindInterfacesTo<CookieView>().FromComponentInHierarchy().AsSingle();
             Container.BindInterfacesTo<CookieModel>().AsSingle();
             Container.BindInterfacesTo<CookiePresenter>().AsSingle();
@@ -24,9 +28,6 @@ namespace gaw241110.inject
             Container.BindInterfacesTo<SeaView>().FromComponentInHierarchy().AsSingle();
             Container.BindInterfacesTo<SeaPresenter>().AsSingle();
             Container.BindInterfacesTo<SeaManager>().AsSingle();
-
-
-
 
             Container.BindInterfacesTo<GameManager>().AsSingle();
 

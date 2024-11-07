@@ -13,10 +13,10 @@ namespace gaw241110.view
 {
     public class StackedCookieView: MonoBehaviour, IStackedCookieView
     {
+        [Inject] IBoardableOnCookie _boardableCookie;
 
         [SerializeField] float _cookieIntervalY = .2f;
         [SerializeField] float _cookieOffsetY = .1f;
-        [SerializeField] GameObject _catObject;
 
         [SerializeField] GameObject _stackCookiePrefab;
 
@@ -24,7 +24,7 @@ namespace gaw241110.view
 
         public void StackCookie()
         {
-            _catObject.transform.localPosition = Vector3.up * _cookieIntervalY * (_stackedCookieList.Count + 1);
+            _boardableCookie.BoardCookie(Vector3.up * _cookieIntervalY * (_stackedCookieList.Count + 1));
 
             var g = Instantiate(_stackCookiePrefab, transform);
             g.transform.localPosition = Vector3.up * (_cookieOffsetY + _cookieIntervalY * _stackedCookieList.Count);
