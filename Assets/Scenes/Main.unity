@@ -959,6 +959,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1756028687}
   - component: {fileID: 1756028688}
+  - component: {fileID: 1756028689}
   m_Layer: 0
   m_Name: FakeSea
   m_TagString: Untagged
@@ -1033,6 +1034,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 1
+--- !u!114 &1756028689
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1756028686}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2443c460d21a11a4b983f0f29c1a5328, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _sea: {fileID: 1756028686}
 --- !u!1 &1825801257
 GameObject:
   m_ObjectHideFlags: 0

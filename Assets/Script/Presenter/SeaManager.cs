@@ -1,4 +1,5 @@
 using Cysharp.Threading.Tasks;
+using gaw241110.presenter;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -10,6 +11,9 @@ namespace gaw241110
 {
     public class SeaManager: ITickable,IManager
     {
+        [Inject] ISeaModel _seaModel;
+
+
         bool _isActive = false;
 
         public void Activate()
@@ -21,7 +25,7 @@ namespace gaw241110
         {
             if (_isActive)
             {
-                Log.DebugLog("TickTest");
+                _seaModel.AddSea(_seaModel.GetSeaRiseSpeed * Time.deltaTime);
             }
         }
     }

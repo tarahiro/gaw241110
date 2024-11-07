@@ -20,6 +20,9 @@ namespace gaw241110.inject
             Container.BindInterfacesTo<CookieModel>().AsSingle();
             Container.BindInterfacesTo<CookiePresenter>().AsSingle();
 
+            Container.BindInterfacesTo<SeaModel>().AsSingle();
+            Container.BindInterfacesTo<SeaView>().FromComponentInHierarchy().AsSingle();
+            Container.BindInterfacesTo<SeaPresenter>().AsSingle();
             Container.BindInterfacesTo<SeaManager>().AsSingle();
 
 
