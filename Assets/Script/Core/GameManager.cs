@@ -9,10 +9,12 @@ namespace gaw241110
 {
     public class GameManager : IInitializable
     {
+        [Inject]
+        ICookiePresenter m_CookiePresenter;
+
         public void Initialize()
         {
-            Log.DebugLog("PlaySe");
-            SoundManager.PlaySE("Enter");
+            m_CookiePresenter.Enter().Forget();
         }
     }
 }

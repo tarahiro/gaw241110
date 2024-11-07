@@ -1,13 +1,17 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Zenject;
 using Cysharp.Threading.Tasks;
 using Tarahiro;
+using gaw241110;
+using gaw241110.presenter;
 
-namespace gaw241110
+
+namespace gaw241110.model
 {
-    public class _CoreTemplate
+    public class _ModelTemplate
     {
     }
 }
