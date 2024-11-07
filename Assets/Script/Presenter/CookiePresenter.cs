@@ -12,12 +12,11 @@ namespace gaw241110.presenter
     {
         #region Field
 
-        [Inject]
-        ICookieView _view;
+        [Inject] ICookieView _view;
 
-        [Inject]
-        ICookieModel _model;
+        [Inject] ICookieModel _model;
 
+        [Inject] IStackedCookieView _stackedCookieView;
         #endregion
 
 
@@ -25,6 +24,7 @@ namespace gaw241110.presenter
         public void Initialize()
         {
             _view.Clicked += OnClicked;
+            _model.CookieAdded += OnCookieAdded;
         }
 
 
@@ -36,6 +36,11 @@ namespace gaw241110.presenter
         void OnClicked()
         {
             _model.AddCookie();
+        }
+
+        void OnCookieAdded()
+        {
+            _stackedCookieView.StackCookie();
         }
 
     }

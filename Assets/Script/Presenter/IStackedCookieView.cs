@@ -9,10 +9,8 @@ using Zenject;
 
 namespace gaw241110.presenter
 {
-    public interface ICookieModel
+    public interface IStackedCookieView
     {
-        //将来的にクッキーの種類を指定できるようにする
-        void AddCookie();
-        event Action CookieAdded;
+        void StackCookie();
     }
 }

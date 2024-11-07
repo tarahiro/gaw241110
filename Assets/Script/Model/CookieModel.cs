@@ -14,11 +14,15 @@ namespace gaw241110.model
     public class CookieModel : ICookieModel
     {
         int _cookieNumber = 0;
+        public event Action CookieAdded;
 
         public void AddCookie()
         {
             _cookieNumber++;
             Log.DebugLog(_cookieNumber.ToString());
+
+            Log.DebugAssert(CookieAdded != null);
+            CookieAdded.Invoke();
         }
     }
 }

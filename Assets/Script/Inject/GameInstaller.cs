@@ -13,7 +13,9 @@ namespace gaw241110.inject
 {
     public class GameInstaller : MonoInstaller
     {
-        public override void InstallBindings() {
+        public override void InstallBindings()
+        {
+            Container.BindInterfacesTo<StackedCookieView>().FromComponentInHierarchy().AsSingle();
             Container.BindInterfacesTo<CookieView>().FromComponentInHierarchy().AsSingle();
             Container.BindInterfacesTo<CookieModel>().AsSingle();
             Container.BindInterfacesTo<CookiePresenter>().AsSingle();
