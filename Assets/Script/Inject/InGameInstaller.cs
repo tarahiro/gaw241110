@@ -47,6 +47,7 @@ namespace gaw241110.inject
             Container.BindInterfacesTo<SeaPresenter>().AsSingle();
             Container.BindInterfacesTo<SeaTicker>().AsSingle();
 
+            Container.BindInterfacesTo<AltitudeView>().FromComponentInHierarchy().AsSingle();
             Container.BindInterfacesTo<ConverterCookieToExp>().AsSingle();
             Container.BindInterfacesTo<ExpView>().FromComponentInHierarchy().AsSingle();
             Container.BindInterfacesTo<ExpModel>().AsSingle();

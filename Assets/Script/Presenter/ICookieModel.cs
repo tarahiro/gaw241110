@@ -14,5 +14,7 @@ namespace gaw241110.presenter
         //将来的にクッキーの種類を指定できるようにする
         void AddCookie();
         event Action CookieAdded;
+        IObservable<float> CookieAltitudeElevated { get; }
+        void InitializeModel(Action cookieAdded, Action<float> cookieAltitudeElevated);
     }
 }

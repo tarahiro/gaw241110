@@ -16,16 +16,16 @@ namespace gaw241110.view
     {
         float _seaLevel = 0;
         float _seaRiseSpeed = .1f;
-        Subject<float> _risenSea = new Subject<float>();
+        Subject<float> _seaRisen = new Subject<float>();
 
         public float GetSeaLevel => _seaLevel;
         public float GetSeaRiseSpeed => _seaRiseSpeed;
-        public IObservable<float> RisenSea => _risenSea;
+        public IObservable<float> SeaRisen => _seaRisen;
 
         public void AddSea(float addedSeaLevel)
         {
             _seaLevel += addedSeaLevel;
-            _risenSea.OnNext(_seaLevel);
+            _seaRisen.OnNext(_seaLevel);
         }
     }
 }

@@ -4,17 +4,15 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using Tarahiro;
+using UniRx;
 using UnityEngine;
 using Zenject;
 
 namespace gaw241110.presenter
 {
-    public interface ISeaModel
+    public interface IAltitudeView
     {
-        float GetSeaLevel { get; }
-        float GetSeaRiseSpeed { get; }
-        IObservable<float> SeaRisen { get; }
-
-        void AddSea(float addedSeaLevel);
+        void UpdateCatAltitude(float altitude);
+        void UpdateSeaAltitude(float altitude);
     }
 }

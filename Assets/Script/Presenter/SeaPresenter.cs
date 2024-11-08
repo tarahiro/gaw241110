@@ -14,10 +14,11 @@ namespace gaw241110.presenter
     {
         [Inject] ISeaModel _model;
         [Inject] ISeaView _view;
+        [Inject] IAltitudeView _alitudeView;
 
         public void Initialize()
         {
-            _model.RisenSea.Subscribe(OnRiseSea);
+            _model.SeaRisen.Subscribe(OnRiseSea);
         }
         public void StopSea()
         {
@@ -27,6 +28,7 @@ namespace gaw241110.presenter
         void OnRiseSea(float seaLevel)
         {
             _view.RiseSea(seaLevel);
+            _alitudeView.UpdateSeaAltitude(seaLevel);
         }
 
     }

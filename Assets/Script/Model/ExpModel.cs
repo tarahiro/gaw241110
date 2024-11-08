@@ -17,7 +17,7 @@ namespace gaw241110.model
         int exp = 0;
         int level = 1;
 
-        const int c_fakeMaxExp = 100;
+        const int c_fakeMaxExp = 115;
         Subject<int> _expUpdated = new Subject<int>();
         Subject<int> _levelUpdated = new Subject<int>();
 
