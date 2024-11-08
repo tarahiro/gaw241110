@@ -15,7 +15,7 @@ namespace gaw241110.presenter
         [Inject] IGameManager _gameManager;
         [Inject] IGameOverCheckable _gameOverCheckable;
         [Inject] IGameClearCheckable _clearCheckable;
-        [Inject] IShowCardCheckable _showCardCheckable;
+        [Inject] IShowCardConditionCheckable _showCardCheckable;
 
         public event Action GameOvered;
         public event Action GameCleared;

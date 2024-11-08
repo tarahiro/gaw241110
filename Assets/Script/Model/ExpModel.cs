@@ -12,7 +12,7 @@ using Zenject;
 
 namespace gaw241110.model
 {
-    public class ExpModel : IExpModel
+    public class ExpModel : IExpModel, IShowCardConditionCheckable
     {
         int exp = 0;
         int level = 1;
@@ -25,6 +25,7 @@ namespace gaw241110.model
 
         public IObservable<int> ExpUpdated => _expUpdated;
         public IObservable<int> LevelUpped => _levelUpdated;
+        public event Action ShowCardChecked;
         public int GetMaxExp => c_fakeMaxExp;
 
         public void InitializeModel(Action<int> expUpdated, Action<int> levelUpped)
@@ -41,13 +42,20 @@ namespace gaw241110.model
         public void AddExp(int addedExp)
         {
             exp += addedExp;
-            if(addedExp > c_fakeMaxExp)
+            if(exp > c_fakeMaxExp)
             {
-                exp -= c_fakeMaxExp;
-                level++;
-                _levelUpdated.OnNext(level);
+                LevelUp();
             }
             _expUpdated.OnNext(exp);
+        }
+
+        void LevelUp()
+        {
+            exp -= c_fakeMaxExp;
+            level++;
+            ShowCardChecked?.Invoke();
+            _levelUpdated.OnNext(level);
+
         }
     }
 }

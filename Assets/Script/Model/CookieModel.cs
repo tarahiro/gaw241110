@@ -11,8 +11,9 @@ using Zenject;
 
 namespace gaw241110.model
 {
-    public class CookieModel : ICookieModel,IGameClearCheckable,IShowCardCheckable
+    public class CookieModel : ICookieModel,IGameClearCheckable
     {
+        [Inject] IConverterCookieToExp _converter;
         int _cookieNumber = 0;
         float _stackedCookieHeight = 0f;
 
@@ -21,7 +22,6 @@ namespace gaw241110.model
 
         public event Action CookieAdded;
         public event Action ClearedGame;
-        public event Action ShowCardChecked;
 
         public void AddCookie()
         {
@@ -29,17 +29,8 @@ namespace gaw241110.model
             _stackedCookieHeight = c_fakeCookieLength * _cookieNumber;
 
             CookieAdded?.Invoke();
+            _converter.Convert(c_fakeCookieLength);
 
-            //fake
-            if(_stackedCookieHeight > GameConst.c_gameClearHeight / 3f && _stackedCookieHeight < GameConst.c_gameClearHeight / 3f + c_fakeCookieLength*2f)
-            {
-                ShowCardChecked?.Invoke();
-            }
-            //fake
-            if (_stackedCookieHeight > GameConst.c_gameClearHeight*2f / 3f && _stackedCookieHeight < GameConst.c_gameClearHeight*2f / 3f + c_fakeCookieLength*2f)
-            {
-                ShowCardChecked?.Invoke();
-            }
 
 
             if (_stackedCookieHeight > GameConst.c_gameClearHeight)
