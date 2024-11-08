@@ -47,6 +47,10 @@ namespace gaw241110.inject
             Container.BindInterfacesTo<SeaPresenter>().AsSingle();
             Container.BindInterfacesTo<SeaTicker>().AsSingle();
 
+            Container.BindInterfacesTo<ExpView>().AsSingle();
+            Container.BindInterfacesTo<ExpModel>().AsSingle();
+            Container.BindInterfacesTo<ExpPresenter>().AsSingle();
+
             Container.BindInterfacesTo<GameManager>().AsSingle();
             Container.BindInitializableExecutionOrder<GameManager>(-100);
 
