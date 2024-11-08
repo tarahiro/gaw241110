@@ -22,6 +22,8 @@ namespace gaw241110.view
 
         List<GameObject> _stackedCookieList = new List<GameObject>();
 
+
+
         public void StackCookie()
         {
             _boardableCookie.BoardCookie(Vector3.up * _cookieIntervalY * (_stackedCookieList.Count + 1));

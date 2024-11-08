@@ -1,16 +1,15 @@
 using Cysharp.Threading.Tasks;
-using gaw241110;
 using System;
 using System.Collections;
 using System.Collections.Generic;
 using Tarahiro;
-using UniRx;
 using UnityEngine;
 using Zenject;
 
-namespace gaw241110.presenter
+namespace gaw241110
 {
-    public interface IGameOverView : IAcceptableInput
+    public static class GameConst
     {
+        public const float c_gameClearHeight = 1f;
     }
 }

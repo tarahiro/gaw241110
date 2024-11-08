@@ -15,11 +15,12 @@ namespace gaw241110.inject
     {
         public override void InstallBindings()
         {
+            Container.BindInterfacesTo<EndGameViewContainer>().AsSingle();
+            Container.BindInterfacesTo<EndGamePresenter>().AsSingle();
+            Container.Bind<GameOverView>().FromComponentInHierarchy().AsSingle();
+            Container.Bind<GameClearView>().FromComponentInHierarchy().AsSingle();
 
-            Container.BindInterfacesTo<GameOverPresenter>().AsSingle();
-            Container.BindInterfacesTo<GameOverView>().AsSingle();
-
-            Container.BindInterfacesTo<CheckGameOverPresenter>().AsSingle();
+            Container.BindInterfacesTo<CheckGamePresenter>().AsSingle();
             Container.BindInterfacesTo<EndGameManager>().AsSingle();
 
             Container.BindInterfacesTo<StackedCookieView>().FromComponentInHierarchy().AsSingle();

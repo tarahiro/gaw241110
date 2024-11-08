@@ -11,7 +11,7 @@ using Zenject;
 
 namespace gaw241110.view
 {
-    public class SeaView : MonoBehaviour, ISeaView, IGameOverCheckableView
+    public class SeaView : MonoBehaviour, ISeaView, IGameOverCheckable
     {
         [Inject] IGameOverableView _gameOverableView;
 

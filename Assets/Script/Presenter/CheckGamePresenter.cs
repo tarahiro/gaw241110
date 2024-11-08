@@ -10,16 +10,19 @@ using Zenject;
 namespace gaw241110.presenter
 
 {
-    public class CheckGameOverPresenter : ICheckGameOverPresenter, IInitializable
+    public class CheckGamePresenter : ICheckGameOverPresenter,ICheckGameClearPresenter, IInitializable
     {
         [Inject] IGameManager _gameManager;
-        [Inject] IGameOverCheckableView _view;
+        [Inject] IGameOverCheckable _gameOverCheckable;
+        [Inject] IGameClearCheckable _clearCheckable;
 
         public event Action GameOvered;
+        public event Action GameCleared;
 
         public void Initialize()
         {
-            _view.GameOvered += OnGameOver;
+            _gameOverCheckable.GameOvered += OnGameOver;
+            _clearCheckable.ClearedGame += OnGameClear;
         }
 
         void OnGameOver()
@@ -27,6 +30,11 @@ namespace gaw241110.presenter
             Log.DebugLog("GameOver");
             Log.DebugAssert(GameOvered != null);
             GameOvered?.Invoke();
+        }
+
+        void OnGameClear()
+        {
+            GameCleared?.Invoke();
         }
     }
 }

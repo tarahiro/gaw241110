@@ -11,7 +11,7 @@ using Zenject;
 
 namespace gaw241110.view
 {
-    public interface IGameOverCheckableView
+    public interface IGameOverCheckable
     {
         event Action GameOvered;
     }

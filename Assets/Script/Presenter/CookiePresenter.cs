@@ -42,8 +42,6 @@ namespace gaw241110.presenter
         public void StopCookie()
         {
             _view.StopClickAccept();
-            _view.Clicked -= OnClicked;
-            _model.CookieAdded -= OnCookieAdded;
         }
 
     }

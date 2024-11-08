@@ -11,7 +11,7 @@ using Zenject;
 
 namespace gaw241110.view
 {
-    public class GameOverView : MonoBehaviour, IEndGameView
+    public class GameClearView : MonoBehaviour, IEndGameView
     {
         bool _isAcceptInput = false;
         [SerializeField] GameObject _description;
