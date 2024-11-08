@@ -17,6 +17,9 @@ namespace gaw241110.inject
         {
 
             Container.BindInterfacesTo<GameOverPresenter>().AsSingle();
+            Container.BindInterfacesTo<GameOverView>().AsSingle();
+
+            Container.BindInterfacesTo<CheckGameOverPresenter>().AsSingle();
             Container.BindInterfacesTo<EndGameManager>().AsSingle();
 
             Container.BindInterfacesTo<StackedCookieView>().FromComponentInHierarchy().AsSingle();

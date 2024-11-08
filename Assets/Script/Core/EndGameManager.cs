@@ -10,14 +10,17 @@ namespace gaw241110
 {
     public class EndGameManager : IInitializable
     {
-        [Inject] IGameOverPresenter _presenter;
+        [Inject] ICheckGameOverPresenter _checkGameOverPresenter;
 
         [Inject] ISeaTicker _seaTicker;
         [Inject] ICookiePresenter _cookiePresenter;
 
+        [Inject] IGameOverPresenter _gameOverPresenter;
+
         public void Initialize()
         {
-            _presenter.GameOvered += GameOver;
+            _checkGameOverPresenter.GameOvered += GameOver;
+            _gameOverPresenter.RestartedGame += RestartGame;
         }
 
         void GameOver()
@@ -27,7 +30,12 @@ namespace gaw241110
             _cookiePresenter.StopCookie();
 
             //ゲームオーバー画面を呼び出す
+            _gameOverPresenter.StartGameOver();
+        }
 
+        void RestartGame()
+        {
+            Log.DebugLog("Restart");
         }
     }
 }

@@ -1,32 +1,34 @@
 using Cysharp.Threading.Tasks;
-using gaw241110.view;
+using gaw241110;
 using System;
 using System.Collections;
 using System.Collections.Generic;
 using Tarahiro;
+using UniRx;
 using UnityEngine;
 using Zenject;
 
 namespace gaw241110.presenter
-
 {
     public class GameOverPresenter : IGameOverPresenter, IInitializable
     {
-        [Inject] IGameManager _gameManager;
-        [Inject] IGameOverCheckableView _view;
+        [Inject] IGameOverView _gameOverView;
 
-        public event Action GameOvered;
+       public event Action RestartedGame;
 
-        public void Initialize()
-        {
-            _view.GameOvered += OnGameOver;
+        public void Initialize() {
+            _gameOverView.Decided += OnDecide;
         }
 
-        void OnGameOver()
+        public void StartGameOver()
         {
-            Log.DebugLog("GameOver");
-            Log.DebugAssert(GameOvered != null);
-            GameOvered?.Invoke();
+            _gameOverView.AcceptInput();
+        }
+
+        void OnDecide()
+        {
+            Log.DebugAssert(RestartedGame != null);
+            RestartedGame?.Invoke();
         }
     }
 }
