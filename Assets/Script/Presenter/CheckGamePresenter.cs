@@ -10,7 +10,7 @@ using Zenject;
 namespace gaw241110.presenter
 
 {
-    public class CheckGamePresenter : ICheckGameOverPresenter,ICheckGameClearPresenter,ICheckCardPresenter, IInitializable
+    public class CheckGamePresenter : ICheckGameOverPresenter,ICheckGameClearPresenter, ICheckCardMenuConditionPresenter, IInitializable
     {
         [Inject] IGameManager _gameManager;
         [Inject] IGameOverCheckable _gameOverCheckable;
@@ -19,13 +19,13 @@ namespace gaw241110.presenter
 
         public event Action GameOvered;
         public event Action GameCleared;
-        public event Action ShowedCard;
+        public event Action FilledCondition;
 
         public void Initialize()
         {
             _gameOverCheckable.GameOvered += OnGameOver;
             _clearCheckable.ClearedGame += OnGameClear;
-            _showCardCheckable.ShowCardChecked += OnShowCard;
+            _showCardCheckable.ShowCardChecked += OnFilledCondition;
         }
 
         void OnGameOver()
@@ -40,9 +40,9 @@ namespace gaw241110.presenter
             GameCleared?.Invoke();
         }
 
-        void OnShowCard()
+        void OnFilledCondition()
         {
-            ShowedCard?.Invoke();
+            FilledCondition?.Invoke();
         }
     }
 }

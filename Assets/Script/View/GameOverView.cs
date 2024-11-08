@@ -20,7 +20,7 @@ namespace gaw241110.view
 
         void Start()
         {
-            EraseView();
+            Hide();
         }
 
         public void Update()
@@ -35,11 +35,11 @@ namespace gaw241110.view
             
         }
 
-        public void ShowView()
+        public void Show()
         {
             _description.SetActive (true);
         }
-        public void EraseView()
+        public void Hide()
         {
             _description.SetActive(false);
         }

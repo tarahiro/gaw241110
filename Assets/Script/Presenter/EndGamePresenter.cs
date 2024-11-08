@@ -27,13 +27,13 @@ namespace gaw241110.presenter
             _endGameView.Decided += OnDecide;
 
             _endGameView.AcceptInput();
-            _endGameView.ShowView();
+            _endGameView.Show();
         }
 
         public void EndGameOver()
         {
             _endGameView.StopAcceptInput();
-            _endGameView.EraseView();
+            _endGameView.Hide();
             _endGameView.Decided -= OnDecide;
         }
 

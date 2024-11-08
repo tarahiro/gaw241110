@@ -8,8 +8,8 @@ using Zenject;
 
 namespace gaw241110
 {
-    public interface ICheckCardPresenter
+    public interface ICheckCardMenuConditionPresenter
     {
-        event Action ShowedCard;
+        event Action FilledCondition;
     }
 }

@@ -10,13 +10,10 @@ using Zenject;
 
 namespace gaw241110.presenter
 {
-    public interface ICardMenuView
+    public interface ICardMenuView: IHideable
     {
 
         //ここでカードの引数を渡す、今は決め打ち
-        void Show();
-        void Hide();
-
         event Action CardSelected;
     }
 }

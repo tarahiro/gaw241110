@@ -39,23 +39,14 @@ namespace gaw241110.presenter
             _stackedCookieView.StackCookie();
         }
 
-        public void StopCookie()
+
+        public void OnPause(PauseSignal signal)
         {
             _view.StopClickAccept();
         }
-        public void StartCookie()
-        {
-            _view.AcceptClick();
-        }
-
-        //Fake
-        public void OnPause(PauseSignal signal)
-        {
-            StopCookie();
-        }
         public void OnResume(ResumeSignal signal)
         {
-            StartCookie();
+            _view.AcceptClick();
         }
 
 

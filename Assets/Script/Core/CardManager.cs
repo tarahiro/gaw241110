@@ -10,14 +10,14 @@ namespace gaw241110
 {
     public class CardManager : IInitializable
     {
-        [Inject] ICheckCardPresenter _checkPresenter;
+        [Inject] ICheckCardMenuConditionPresenter _checkPresenter;
         [Inject] IGamePauser _gamePauser;
         [Inject] ICardMenuPresenter _cardMenuPresenter;
 
 
         public void Initialize()
         {
-            _checkPresenter.ShowedCard += ShowCard;
+            _checkPresenter.FilledCondition += ShowCard;
             _cardMenuPresenter.CardSelected += OnSelectCard;
         }
 

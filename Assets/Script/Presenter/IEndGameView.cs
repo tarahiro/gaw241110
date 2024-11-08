@@ -10,9 +10,7 @@ using Zenject;
 
 namespace gaw241110.presenter
 {
-    public interface IEndGameView : IAcceptableInput
+    public interface IEndGameView : IAcceptableInput,IHideable
     {
-        void ShowView();
-        void EraseView();
     }
 }
