@@ -9,11 +9,11 @@ using System;
 
 namespace gaw241110.presenter
 {
-    public class CookiePresenter:ICookiePresenter, IInitializable, IDisposable
+    public class CookiePresenter:ICookiePresenter, IInitializable
     {
         #region Field
 
-        [Inject] ICookieView _view;
+        [Inject] IClickCookieView _view;
 
         [Inject] ICookieModel _model;
 
@@ -29,11 +29,6 @@ namespace gaw241110.presenter
         }
 
 
-        public async UniTask Enter()
-        {
-            Log.DebugLog("CookiePresenterÇÃèàóùäJén");
-        }
-
         void OnClicked()
         {
             _model.AddCookie();
@@ -44,11 +39,11 @@ namespace gaw241110.presenter
             _stackedCookieView.StackCookie();
         }
 
-        public void Dispose()
+        public void StopCookie()
         {
+            _view.StopClickAccept();
             _view.Clicked -= OnClicked;
             _model.CookieAdded -= OnCookieAdded;
-
         }
 
     }

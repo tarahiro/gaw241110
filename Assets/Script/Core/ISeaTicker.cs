@@ -7,10 +7,10 @@ using Tarahiro;
 using UnityEngine;
 using Zenject;
 
-namespace gaw241110.presenter
+
+namespace gaw241110
 {
-    public interface ICookieView
+    public interface ISeaTicker: ITickable, IActivateableTick
     {
-        event Action Clicked;
     }
 }

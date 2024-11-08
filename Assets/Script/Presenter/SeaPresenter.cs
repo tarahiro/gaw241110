@@ -10,7 +10,7 @@ using Zenject;
 
 namespace gaw241110.presenter
 {
-    public class SeaPresenter : IInitializable
+    public class SeaPresenter : ISeaPresenter, IInitializable
     {
         [Inject] ISeaModel _model;
         [Inject] ISeaView _view;
@@ -19,10 +19,15 @@ namespace gaw241110.presenter
         {
             _model.RisenSea.Subscribe(OnRiseSea);
         }
+        public void StopSea()
+        {
+
+        }
 
         void OnRiseSea(float seaLevel)
         {
             _view.RiseSea(seaLevel);
         }
+
     }
 }

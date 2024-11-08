@@ -1,4 +1,5 @@
 using Cysharp.Threading.Tasks;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using Tarahiro;
@@ -7,8 +8,8 @@ using Zenject;
 
 namespace gaw241110
 {
-    public interface ICookiePresenter
+    public interface IGameOverPresenter
     {
-        void StopCookie();
+        event Action GameOvered;
     }
 }

@@ -7,9 +7,9 @@ using Tarahiro;
 using UnityEngine;
 using Zenject;
 
-namespace gaw241110
+namespace gaw241110.model
 {
-    public class SeaManager: ITickable,IActivateableTick
+    public class SeaTicker: ISeaTicker
     {
         [Inject] ISeaModel _seaModel;
 
@@ -21,11 +21,26 @@ namespace gaw241110
             _isActive = true;
         }
 
+        public void InActivate()
+        {
+            _isActive = false;
+        }
+
         public void Tick()
         {
             if (_isActive)
             {
-                _seaModel.AddSea(_seaModel.GetSeaRiseSpeed * Time.deltaTime);
+                float coeff = 1f;
+
+#if ENABLE_DEBUG
+                if (Input.GetKey(KeyCode.LeftShift))
+                {
+                    coeff *= 10f;
+                }
+#endif
+
+
+                _seaModel.AddSea(_seaModel.GetSeaRiseSpeed * Time.deltaTime * coeff);
             }
         }
     }

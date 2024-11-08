@@ -1,4 +1,5 @@
 using Cysharp.Threading.Tasks;
+using gaw241110;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -6,12 +7,12 @@ using Tarahiro;
 using UnityEngine;
 using Zenject;
 
-namespace gaw241110
+namespace gaw241110.presenter
 {
-    public interface IActivateableTick
+    public interface IClickCookieView
     {
-        void Activate();
+        event Action Clicked;
 
-        void InActivate();
+        void StopClickAccept();
     }
 }

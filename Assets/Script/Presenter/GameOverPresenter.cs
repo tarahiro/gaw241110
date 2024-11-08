@@ -10,10 +10,12 @@ using Zenject;
 namespace gaw241110.presenter
 
 {
-    public class GameOverPresenter : IInitializable
+    public class GameOverPresenter : IGameOverPresenter, IInitializable
     {
         [Inject] IGameManager _gameManager;
         [Inject] IGameOverCheckableView _view;
+
+        public event Action GameOvered;
 
         public void Initialize()
         {
@@ -23,7 +25,8 @@ namespace gaw241110.presenter
         void OnGameOver()
         {
             Log.DebugLog("GameOver");
-            _gameManager.GameOver();
+            Log.DebugAssert(GameOvered != null);
+            GameOvered?.Invoke();
         }
     }
 }

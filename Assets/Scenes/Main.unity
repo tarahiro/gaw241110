@@ -920,7 +920,7 @@ GameObject:
   - component: {fileID: 1313537863}
   - component: {fileID: 1313537862}
   m_Layer: 0
-  m_Name: SceneContext
+  m_Name: InGameSceneContext
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1333,6 +1333,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f0cdc74d524a41418408c0ce74d813c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _button: {fileID: 1414093969}
 --- !u!1 &1534134913
 GameObject:
   m_ObjectHideFlags: 0

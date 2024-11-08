@@ -11,12 +11,13 @@ using gaw241110.model;
 
 namespace gaw241110.inject
 {
-    public class GameInstaller : MonoInstaller
+    public class InGameInstaller : MonoInstaller
     {
         public override void InstallBindings()
         {
 
             Container.BindInterfacesTo<GameOverPresenter>().AsSingle();
+            Container.BindInterfacesTo<EndGameManager>().AsSingle();
 
             Container.BindInterfacesTo<StackedCookieView>().FromComponentInHierarchy().AsSingle();
             Container.BindInterfacesTo<CatView>().FromComponentInHierarchy().AsSingle();
@@ -27,7 +28,7 @@ namespace gaw241110.inject
             Container.BindInterfacesTo<SeaModel>().AsSingle();
             Container.BindInterfacesTo<SeaView>().FromComponentInHierarchy().AsSingle();
             Container.BindInterfacesTo<SeaPresenter>().AsSingle();
-            Container.BindInterfacesTo<SeaManager>().AsSingle();
+            Container.BindInterfacesTo<SeaTicker>().AsSingle();
 
             Container.BindInterfacesTo<GameManager>().AsSingle();
 
