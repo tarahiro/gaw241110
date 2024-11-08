@@ -5,10 +5,11 @@ using Zenject;
 using Cysharp.Threading.Tasks;
 using Tarahiro;
 using gaw241110;
+using System;
 
 namespace gaw241110.presenter
 {
-    public class CookiePresenter:ICookiePresenter, IInitializable
+    public class CookiePresenter:ICookiePresenter, IInitializable, IDisposable
     {
         #region Field
 
@@ -41,6 +42,13 @@ namespace gaw241110.presenter
         void OnCookieAdded()
         {
             _stackedCookieView.StackCookie();
+        }
+
+        public void Dispose()
+        {
+            _view.Clicked -= OnClicked;
+            _model.CookieAdded -= OnCookieAdded;
+
         }
 
     }

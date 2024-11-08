@@ -12,7 +12,7 @@ namespace gaw241110.presenter
 {
     public class GameOverPresenter : IInitializable
     {
-
+        [Inject] IGameManager _gameManager;
         [Inject] IGameOverCheckableView _view;
 
         public void Initialize()
@@ -23,6 +23,7 @@ namespace gaw241110.presenter
         void OnGameOver()
         {
             Log.DebugLog("GameOver");
+            _gameManager.GameOver();
         }
     }
 }

@@ -9,7 +9,7 @@ using Zenject;
 
 namespace gaw241110
 {
-    public class SeaManager: ITickable,IManager
+    public class SeaManager: ITickable,IActivateableTick
     {
         [Inject] ISeaModel _seaModel;
 

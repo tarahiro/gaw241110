@@ -4,17 +4,24 @@ using UnityEngine;
 using Zenject;
 using Cysharp.Threading.Tasks;
 using Tarahiro;
+using UnityEditor;
 
 namespace gaw241110
 {
-    public class GameManager : IInitializable
+    public class GameManager : IGameManager, IInitializable
     {
         [Inject] ICookiePresenter cookiePresenter;
-        [Inject] IManager _seaManager;
+        [Inject] IActivateableTick _seaManager;
 
         public void Initialize()
         {
             _seaManager.Activate();
+        }
+
+        public void GameOver()
+        {
+            Log.DebugLog("GameOverManager.GameOver");
+            GameObject.Destroy(GameObject.Find("SceneContext"));
         }
     }
 }
