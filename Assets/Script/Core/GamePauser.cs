@@ -21,5 +21,12 @@ namespace gaw241110
             _cookiePresenter.StopCookie();
 
         }
+
+        public void Restart()
+        {
+            _seaTicker.Activate();
+            _cookiePresenter.StartCookie();
+
+        }
     }
 }

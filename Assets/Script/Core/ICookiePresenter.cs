@@ -10,5 +10,6 @@ namespace gaw241110
     public interface ICookiePresenter
     {
         void StopCookie();
+        void StartCookie();
     }
 }

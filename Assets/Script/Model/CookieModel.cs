@@ -31,13 +31,18 @@ namespace gaw241110.model
             CookieAdded?.Invoke();
 
             //fake
-            if(_stackedCookieHeight > GameConst.c_gameClearHeight / 2f)
+            if(_stackedCookieHeight > GameConst.c_gameClearHeight / 3f && _stackedCookieHeight < GameConst.c_gameClearHeight / 3f + c_fakeCookieLength*2f)
+            {
+                ShowCardChecked?.Invoke();
+            }
+            //fake
+            if (_stackedCookieHeight > GameConst.c_gameClearHeight*2f / 3f && _stackedCookieHeight < GameConst.c_gameClearHeight*2f / 3f + c_fakeCookieLength*2f)
             {
                 ShowCardChecked?.Invoke();
             }
 
 
-            if(_stackedCookieHeight > GameConst.c_gameClearHeight)
+            if (_stackedCookieHeight > GameConst.c_gameClearHeight)
             {
                 ClearedGame?.Invoke();
             }

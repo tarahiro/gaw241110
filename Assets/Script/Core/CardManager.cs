@@ -12,17 +12,29 @@ namespace gaw241110
     {
         [Inject] ICheckCardPresenter _checkPresenter;
         [Inject] IGamePauser _gamePauser;
+        [Inject] ICardMenuPresenter _cardMenuPresenter;
 
 
         public void Initialize()
         {
             _checkPresenter.ShowedCard += ShowCard;
+            _cardMenuPresenter.CardSelected += OnSelectCard;
         }
 
         void ShowCard()
         {
             Log.DebugLog("showCard");
             _gamePauser.Pause();
+            _cardMenuPresenter.Show();
+
         }
+
+        void OnSelectCard()
+        {
+            Log.DebugLog("OnSelectCard");
+            _gamePauser.Restart();
+            _cardMenuPresenter.Hide();
+        }
+
     }
 }

@@ -28,5 +28,9 @@ namespace gaw241110.view
         {
             _button.enabled = false;
         }
+        public void AcceptClick()
+        {
+            _button.enabled = true;
+        }
     }
 }

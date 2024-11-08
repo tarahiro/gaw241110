@@ -14,5 +14,6 @@ namespace gaw241110.presenter
         event Action Clicked;
 
         void StopClickAccept();
+        void AcceptClick();
     }
 }

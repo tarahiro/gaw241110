@@ -10,6 +10,6 @@ namespace gaw241110
 {
     public static class GameConst
     {
-        public const float c_gameClearHeight = 1f;
+        public const float c_gameClearHeight = 3f;
     }
 }

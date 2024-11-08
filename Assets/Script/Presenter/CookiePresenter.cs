@@ -43,6 +43,11 @@ namespace gaw241110.presenter
         {
             _view.StopClickAccept();
         }
+        public void StartCookie()
+        {
+            _view.AcceptClick();
+        }
+                
 
     }
 }

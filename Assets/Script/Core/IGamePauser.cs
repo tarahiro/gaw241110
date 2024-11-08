@@ -11,5 +11,6 @@ namespace gaw241110
     public interface IGamePauser
     {
         void Pause();
+        void Restart();
     }
 }
