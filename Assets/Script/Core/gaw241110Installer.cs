@@ -14,8 +14,6 @@ namespace gaw241110
         public override void InstallBindings()
         {
             Log.DebugLog("InstallBindings");
-            Container.Bind<SceneContext>().FromComponentOn(GameObject.Find("InGameSceneContext")).AsSingle();
-            Container.BindInterfacesTo<ProjectManager>().AsSingle().NonLazy();
         }
     }
 }

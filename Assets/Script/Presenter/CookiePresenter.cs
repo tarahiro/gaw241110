@@ -47,7 +47,17 @@ namespace gaw241110.presenter
         {
             _view.AcceptClick();
         }
-                
+
+        //Fake
+        public void OnPause(PauseSignal signal)
+        {
+            StopCookie();
+        }
+        public void OnResume(ResumeSignal signal)
+        {
+            StartCookie();
+        }
+
 
     }
 }

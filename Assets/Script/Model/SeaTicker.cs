@@ -43,5 +43,16 @@ namespace gaw241110.model
                 _seaModel.AddSea(_seaModel.GetSeaRiseSpeed * Time.deltaTime * coeff);
             }
         }
+
+
+        //Fake
+        public void OnPause(PauseSignal signal)
+        {
+            InActivate();
+        }
+        public void OnResume(ResumeSignal signal)
+        {
+            Activate();
+        }
     }
 }

@@ -8,6 +8,7 @@ using gaw241110;
 using gaw241110.presenter;
 using gaw241110.view;
 using gaw241110.model;
+using Zenject.SpaceFighter;
 
 namespace gaw241110.inject
 {
@@ -43,8 +44,20 @@ namespace gaw241110.inject
             Container.BindInterfacesTo<SeaTicker>().AsSingle();
 
             Container.BindInterfacesTo<GameManager>().AsSingle();
-
+            // Container.Bind<List<IPausable>>().FromInstance(Container.ResolveAll<IPausable>()).AsSingle();
             Container.BindInitializableExecutionOrder<GameManager>(-100);
+
+
+
+            // SignalBus‚ğ—˜—p‚·‚é
+            SignalBusInstaller.Install(Container);
+            // Signal‚ğ’è‹`‚·‚é
+            Container.DeclareSignal<PauseSignal>();
+            Container.DeclareSignal<ResumeSignal>();
+            // Signal‚ğó‚¯æ‚Á‚½Û‚Ìˆ—
+            Container.BindSignal<PauseSignal>().ToMethod<IPauseable>(p => p.OnPause).FromResolveAll();
+            Container.BindSignal<ResumeSignal>().ToMethod<IPauseable>(p => p.OnResume).FromResolveAll();
+
         }
     }
 }

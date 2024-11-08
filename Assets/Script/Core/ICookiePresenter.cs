@@ -7,7 +7,7 @@ using Zenject;
 
 namespace gaw241110
 {
-    public interface ICookiePresenter
+    public interface ICookiePresenter: IPauseable
     {
         void StopCookie();
         void StartCookie();
