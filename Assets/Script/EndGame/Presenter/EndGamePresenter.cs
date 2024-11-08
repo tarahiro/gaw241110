@@ -8,8 +8,9 @@ using Tarahiro;
 using UniRx;
 using UnityEngine;
 using Zenject;
+using gaw241110.endgame;
 
-namespace gaw241110.presenter
+namespace gaw241110.endgame.presenter
 {
     public class EndGamePresenter : IEndGamePresenter
     {
@@ -39,7 +40,6 @@ namespace gaw241110.presenter
 
         void OnDecide()
         {
-            Log.DebugLog("リスタート");
             Log.DebugAssert(RestartedGame != null);
             RestartedGame?.Invoke();
         }

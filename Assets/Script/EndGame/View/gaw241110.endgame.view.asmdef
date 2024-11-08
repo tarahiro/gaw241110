@@ -1,19 +1,14 @@
 {
-    "name": "gaw241110.inject",
-    "rootNamespace": "gaw241110.inject",
+    "name": "gaw241110.endgame.view",
+    "rootNamespace": "gaw241110.endgame.view",
     "references": [
         "GUID:0be27b54e10228743974a8df3dda3639",
         "GUID:0d8beb7f090555447a6cf5ce9e54dbb4",
         "GUID:560b04d1a97f54a4e82edc0cbbb69285",
         "GUID:f51ebe6a0ceec4240a699833d6309b23",
         "GUID:cca50818ff866434890ad072cbbbba1d",
-        "GUID:c8f3bb2a25dac0e4594443395d922dd7",
-        "GUID:185a0449bfe5c9144837c2b47895317e",
-        "GUID:68802f5293fce134f9bde64943e416ff",
         "GUID:ea37a851369061e43b34a820444c2a22",
-        "GUID:6bfafe3b878091840b0b7f0b7456479a",
-        "GUID:89bd59376feb02c48a6454d025f98607",
-        "GUID:a708c4b9914138c418160078d3d18b5c"
+        "GUID:89bd59376feb02c48a6454d025f98607"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],

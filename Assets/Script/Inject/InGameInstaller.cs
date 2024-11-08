@@ -8,6 +8,10 @@ using gaw241110;
 using gaw241110.presenter;
 using gaw241110.view;
 using gaw241110.model;
+using gaw241110.endgame;
+using gaw241110.endgame.presenter;
+using gaw241110.endgame.view;
+using gaw241110.endgame.model;
 using Zenject.SpaceFighter;
 
 namespace gaw241110.inject
@@ -44,7 +48,6 @@ namespace gaw241110.inject
             Container.BindInterfacesTo<SeaTicker>().AsSingle();
 
             Container.BindInterfacesTo<GameManager>().AsSingle();
-            // Container.Bind<List<IPausable>>().FromInstance(Container.ResolveAll<IPausable>()).AsSingle();
             Container.BindInitializableExecutionOrder<GameManager>(-100);
 
 

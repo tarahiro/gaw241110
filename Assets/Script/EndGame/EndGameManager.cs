@@ -6,8 +6,9 @@ using Tarahiro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using Zenject;
+using gaw241110;
 
-namespace gaw241110
+namespace gaw241110.endgame
 {
     public class EndGameManager : IInitializable
     {

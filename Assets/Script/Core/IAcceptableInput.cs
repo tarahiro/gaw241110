@@ -9,12 +9,10 @@ using Zenject;
 
 namespace gaw241110
 {
-    public interface IEndGamePresenter
+    public interface IAcceptableInput
     {
-        event Action RestartedGame;
-
-        void StartEndGame(string key);
-
-        void EndGameOver();
+        event Action Decided;
+        void AcceptInput();
+        void StopAcceptInput();
     }
 }
