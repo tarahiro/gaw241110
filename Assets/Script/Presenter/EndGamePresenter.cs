@@ -24,7 +24,6 @@ namespace gaw241110.presenter
         {
             _endGameView = _viewSelector.SelectView(key);
 
-            Log.DebugLog("ViewÇ…çwì«");
             _endGameView.Decided += OnDecide;
 
             _endGameView.AcceptInput();

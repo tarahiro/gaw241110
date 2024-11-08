@@ -15,6 +15,9 @@ namespace gaw241110.inject
     {
         public override void InstallBindings()
         {
+            Container.BindInterfacesTo<GamePauser>().AsSingle();
+            Container.BindInterfacesTo<CardManager>().AsSingle();
+
             Container.BindInterfacesTo<EndGameViewContainer>().AsSingle();
             Container.BindInterfacesTo<EndGamePresenter>().AsSingle();
             Container.Bind<GameOverView>().FromComponentInHierarchy().AsSingle();

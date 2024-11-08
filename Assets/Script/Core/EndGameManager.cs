@@ -13,9 +13,7 @@ namespace gaw241110
     {
         [Inject] ICheckGameOverPresenter _checkGameOverPresenter;
         [Inject] ICheckGameClearPresenter _checkGameClearPresenter;
-
-        [Inject] ISeaTicker _seaTicker;
-        [Inject] ICookiePresenter _cookiePresenter;
+        [Inject] IGamePauser _gamePauser;
 
         [Inject] IEndGamePresenter _gameOverPresenter;
 
@@ -28,21 +26,20 @@ namespace gaw241110
 
         void GameOver()
         {
-            //必要な要素をストップさせる。海、クリック等
-            _seaTicker.InActivate();
-            _cookiePresenter.StopCookie();
-
-            //ゲームオーバー画面を呼び出す
-            _gameOverPresenter.StartEndGame("GameOver");
+            EndGame("GameOver");
         }
+
         void GameClear()
         {
-            //必要な要素をストップさせる。海、クリック等
-            _seaTicker.InActivate();
-            _cookiePresenter.StopCookie();
+            EndGame("GameClear");
+        }
+
+        void EndGame(string key)
+        {
+            _gamePauser.Pause();
 
             //ゲームオーバー画面を呼び出す
-            _gameOverPresenter.StartEndGame("GameClear");
+            _gameOverPresenter.StartEndGame(key);
         }
 
         void RestartGame()
