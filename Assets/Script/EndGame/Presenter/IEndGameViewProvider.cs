@@ -10,7 +10,7 @@ using gaw241110.endgame;
 
 namespace gaw241110.endgame.presenter
 {
-    public interface IEndGameViewContainer
+    public interface IEndGameViewProvider
     {
         IEndGameView SelectView(string key);
     }

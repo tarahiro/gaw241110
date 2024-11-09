@@ -28,7 +28,7 @@ namespace gaw241110.inject
             Container.BindInterfacesTo<CardMenuView>().FromComponentInHierarchy().AsSingle();
             Container.BindInterfacesTo<CardManager>().AsSingle();
 
-            Container.BindInterfacesTo<EndGameViewContainer>().AsSingle();
+            Container.BindInterfacesTo<EndGameViewProvider>().AsSingle();
             Container.BindInterfacesTo<EndGamePresenter>().AsSingle();
             Container.Bind<GameOverView>().FromComponentInHierarchy().AsSingle();
             Container.Bind<GameClearView>().FromComponentInHierarchy().AsSingle();

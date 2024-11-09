@@ -26,12 +26,10 @@ namespace gaw241110.view
 
         public void UpdateCatAltitude(float altitude)
         {
-            Log.DebugLog("cat ;" + altitude);
             _cat.anchoredPosition = Vector2.up * GetComponent<RectTransform>().sizeDelta.y * altitude / _slider.maxValue;
         }
         public void UpdateSeaAltitude(float altitude)
         {
-            Log.DebugLog("sea ;" + altitude);
             _slider.value = altitude;
         }
     }

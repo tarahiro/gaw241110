@@ -11,7 +11,7 @@ using gaw241110.endgame.presenter;
 
 namespace gaw241110.endgame.view
 {
-    public class EndGameViewContainer : IEndGameViewContainer
+    public class EndGameViewProvider : IEndGameViewProvider
     {
         [Inject] GameOverView _gameOverView;
         [Inject] GameClearView _gameClearView;

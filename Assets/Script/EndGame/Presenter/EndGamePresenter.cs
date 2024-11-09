@@ -14,7 +14,7 @@ namespace gaw241110.endgame.presenter
 {
     public class EndGamePresenter : IEndGamePresenter
     {
-        [Inject] IEndGameViewContainer _viewSelector;
+        [Inject] IEndGameViewProvider _viewSelector;
 
         IEndGameView _endGameView;
         
