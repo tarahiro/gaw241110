@@ -13,6 +13,7 @@ using gaw241110.endgame.presenter;
 using gaw241110.endgame.view;
 using gaw241110.endgame.model;
 using Zenject.SpaceFighter;
+using gaw241110.Model;
 
 namespace gaw241110.inject
 {
@@ -22,8 +23,8 @@ namespace gaw241110.inject
         {
             Container.BindInterfacesTo<GamePauser>().AsSingle();
 
-
-
+            Container.BindInterfacesTo<TemplateMasterDataProvider>().AsSingle();
+            Container.BindInterfacesTo<CardModel>().AsSingle();
             Container.BindInterfacesTo<CardMenuPresenter>().AsSingle();
             Container.BindInterfacesTo<CardMenuView>().FromComponentInHierarchy().AsSingle();
             Container.BindInterfacesTo<CardManager>().AsSingle();
