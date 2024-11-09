@@ -21,9 +21,10 @@ namespace gaw241110.view
             _cardRoot.SetActive(false);
         }
 
-        public void Show()
+        public void Show(List<ISkillViewArgs> args)
         {
             _cardRoot.SetActive(true);
+
         }
 
         public void Hide()

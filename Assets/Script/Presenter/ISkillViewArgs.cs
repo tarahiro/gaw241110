@@ -10,12 +10,10 @@ using Zenject;
 
 namespace gaw241110.presenter
 {
-    public interface ICardMenuView
+    public interface ISkillViewArgs
     {
-
-        void Show(List<ISkillViewArgs> args);
-        void Hide();
-        //ここでカードの引数を渡す、今は決め打ち
-        event Action CardSelected;
+        public string DisplayName { get; }
+        public string Description { get; }
+        public string ImagePath { get; }
     }
 }

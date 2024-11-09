@@ -10,12 +10,8 @@ using Zenject;
 
 namespace gaw241110.presenter
 {
-    public interface ICardMenuView
+    public interface IOfferedSkillViewArgsFactory
     {
-
-        void Show(List<ISkillViewArgs> args);
-        void Hide();
-        //ここでカードの引数を渡す、今は決め打ち
-        event Action CardSelected;
+        List<ISkillViewArgs> Create();
     }
 }

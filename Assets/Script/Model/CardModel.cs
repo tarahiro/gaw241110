@@ -13,11 +13,11 @@ namespace gaw241110.model
 {
     public class CardModel:IInitializable,ICardModel
     {
-        [Inject] ITemplateMasterDataProvider masterDataProvider;
+        [Inject] ISkillMasterDataProvider masterDataProvider;
 
         public void Initialize()
         {
-            Log.DebugLog(masterDataProvider.TryGetFromIndex(0).GetMaster().FakeDescription);
+            Log.DebugLog(masterDataProvider.TryGetFromIndex(0).GetMaster().Description);
         }
     }
 }

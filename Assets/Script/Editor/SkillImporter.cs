@@ -17,23 +17,27 @@ namespace gaw241110.Editor
     //---クラス作成時にやること---//
     //"Template" を置換
     //ITemplateMasterに合わせてフィールドを追加
-    internal sealed class TemplateImporter
+    internal sealed class SkillImporter
     {
-        const string c_XmlPath = "ImportData/Template/Template.xml";
+        const string c_XmlPath = "ImportData/Skill/Skill.xml";
         const string c_SheetName = "Script";
         enum Columns
         {
             Index = 0,
             Id = 1,
-            Description = 2,
+            DisplayName = 2,
+            Description = 3,
+            CardImagePath = 4,
+            SkillKey = 5,
+            SkillArg = 6,
         }
 
         //--------------------------------------------------------------------
         // 読み込み
         //--------------------------------------------------------------------
 
-        [MenuItem("Assets/Tables/Import Template", false, 2)]
-        static void ImportMenuTemplate()
+        [MenuItem("Assets/Tables/Import Skill", false, 2)]
+        static void ImportMenuSkill()
         {
             var stopwatch = new System.Diagnostics.Stopwatch();
             stopwatch.Start();
@@ -41,14 +45,14 @@ namespace gaw241110.Editor
             Import();
 
             stopwatch.Stop();
-            Log.DebugLog($"Template imported in {stopwatch.ElapsedMilliseconds / 1000.0f} seconds.");
+            Log.DebugLog($"Skill imported in {stopwatch.ElapsedMilliseconds / 1000.0f} seconds.");
         }
 
         public static void Import()
         {
             var book = XmlImporter.ImportWorkbook(c_XmlPath);
 
-            var TemplateDataList = new List<TemplateMasterData.Record>();
+            var SkillDataList = new List<SkillMasterData.Record>();
 
             var sheet = book.TryGetWorksheet(c_SheetName);
             if (sheet == null)
@@ -63,16 +67,20 @@ namespace gaw241110.Editor
                     if (int.TryParse(sheet[row, (int)Columns.Index].String, out int index))
                     {
                         string id = sheet[row, (int)Columns.Id].String;
-                        TemplateDataList.Add(new TemplateMasterData.Record(index, id)
+                        SkillDataList.Add(new SkillMasterData.Record(index, id)
                         {
+                            SettableDisplayName = sheet[row, (int)Columns.DisplayName].String,
                             SettableDescription = sheet[row, (int)Columns.Description].String,
+                            SettableCardImagePath = sheet[row, (int)Columns.CardImagePath].String,
+                            SettableSkillKey = sheet[row, (int)Columns.SkillKey].String,
+                            SettableSkillArg = sheet[row, (int)Columns.SkillArg].Float,
                         });
                     }
                 }
             }
 
             // データ出力
-            XmlImporter.ExportOrderedDictionary<TemplateMasterData, TemplateMasterData.Record, IMasterDataRecord<ITemplateMaster>>(TemplateMasterData.c_DataPath, TemplateDataList);
+            XmlImporter.ExportOrderedDictionary<SkillMasterData, SkillMasterData.Record, IMasterDataRecord<ISkillMaster>>(SkillMasterData.c_DataPath, SkillDataList);
         }
     }
 }
