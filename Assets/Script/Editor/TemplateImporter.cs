@@ -5,7 +5,8 @@ using Tarahiro.MasterData;
 using Tarahiro.Editor.XmlImporter;
 using System.Collections.Generic;
 using UnityEditor;
-using gaw241110.Model;
+using gaw241110.model;
+using gaw241110.model.masterData;
 
 namespace gaw241110.Editor
 {

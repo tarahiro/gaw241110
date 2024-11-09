@@ -8,12 +8,12 @@ using gaw241110;
 using gaw241110.presenter;
 using gaw241110.view;
 using gaw241110.model;
+using gaw241110.model.masterData;
 using gaw241110.endgame;
 using gaw241110.endgame.presenter;
 using gaw241110.endgame.view;
 using gaw241110.endgame.model;
 using Zenject.SpaceFighter;
-using gaw241110.Model;
 
 namespace gaw241110.inject
 {

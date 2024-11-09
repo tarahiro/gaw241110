@@ -2,10 +2,11 @@
     "name": "gaw241110.Editor",
     "rootNamespace": "",
     "references": [
-        "GUID:68802f5293fce134f9bde64943e416ff",
-        "GUID:cca50818ff866434890ad072cbbbba1d",
         "GUID:0be27b54e10228743974a8df3dda3639",
-        "GUID:cdc9eda939f6a8649a5f90cc3ecf4fd8"
+        "GUID:cdc9eda939f6a8649a5f90cc3ecf4fd8",
+        "GUID:cca50818ff866434890ad072cbbbba1d",
+        "GUID:68802f5293fce134f9bde64943e416ff",
+        "GUID:879fa349829f65f45995b8b01f0d2926"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],
