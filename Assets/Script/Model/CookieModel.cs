@@ -49,7 +49,7 @@ namespace gaw241110.model
             //デリゲート実行
             for (int i = 0; i < _parameter.AddedCookieNumber; i++)
             {
-                _cookieAdded?.Invoke(_viewArgsFactory.Create(_parameter.CookieLength));
+                _cookieAdded?.Invoke(_viewArgsFactory.Create("Cookie", _parameter.CookieLength, _parameter.CookieScale));
             }
             _cookieAltitudeElevated.OnNext(_stackedCookieHeight);
 

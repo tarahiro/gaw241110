@@ -8,7 +8,7 @@ using Zenject;
 
 namespace gaw241110
 {
-    public class CardManager : IInitializable
+    public class CardManager : IInitializable, ICardManager
     {
         [Inject] ICheckCardMenuConditionPresenter _checkPresenter;
         [Inject] IGamePauser _gamePauser;
@@ -21,12 +21,10 @@ namespace gaw241110
             _cardMenuPresenter.CardSelected += OnSelectCard;
         }
 
-        void ShowCard()
+        public void ShowCard()
         {
-            Log.DebugLog("showCard");
             _gamePauser.Pause();
             _cardMenuPresenter.Show();
-
         }
 
         void OnSelectCard()

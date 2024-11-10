@@ -12,9 +12,9 @@ namespace gaw241110.presenter
 {
     public class CookieViewArgsFactory : ICookieViewArgsFactory
     {
-        public ICookieViewArgs Create(float length)
+        public ICookieViewArgs Create(string prefabName, float length, float scale)
         {
-            return new CookieViewArgs(length);
+            return new CookieViewArgs(prefabName, length, scale);
         }
     }
 }

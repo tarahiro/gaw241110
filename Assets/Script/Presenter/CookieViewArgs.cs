@@ -14,11 +14,15 @@ namespace gaw241110.presenter
     {
         float _length;
 
+        public string PrefabName { get; set; }
         public float Length => _length;
+        public float Scale { get; set; }
 
-        public CookieViewArgs(float length)
+        public CookieViewArgs(string prefabName, float length, float scale)
         {
+            PrefabName = prefabName;
             _length = length;
+            Scale = scale;
         }
     }
 }

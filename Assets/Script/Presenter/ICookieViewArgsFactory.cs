@@ -12,6 +12,6 @@ namespace gaw241110.presenter
 {
     public interface ICookieViewArgsFactory
     {
-        ICookieViewArgs Create(float length);
+        ICookieViewArgs Create(string prefabName, float length, float scale);
     }
 }

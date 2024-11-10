@@ -21,10 +21,13 @@ namespace gaw241110.inject
     {
         public override void InstallBindings()
         {
+            Container.BindInterfacesTo<DebugModelTicker>().AsSingle();
+
             Container.BindInterfacesTo<GamePauser>().AsSingle();
 
             Container.BindInterfacesTo<CookieViewArgsFactory>().AsSingle();
             Container.BindInterfacesTo<CookieParameter>().AsSingle();
+
             Container.BindInterfacesTo<SkillMasterDataProvider>().AsSingle();
             Container.BindInterfacesTo<SkillViewArgs>().AsSingle();
             Container.BindInterfacesTo<OfferedSkillViewArgsFactory>().AsSingle();

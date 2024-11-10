@@ -24,14 +24,17 @@ namespace gaw241110.model
         public int AddedCookieNumber => _addedCookieNumber;
         public float CookieLength => _cookieLength;
 
+        public float CookieScale { get; set; } = 1f;
+
         public void MultiplyAddedCookieNumber(int multiplierFromInit)
         {
             _addedCookieNumber = c_InitialAddedCookieNumber * multiplierFromInit;
         }
 
-        public void MultiplyACookieLength(float multiplierFromInit)
+        public void MultiplyCookieLength(float multiplierFromInit)
         {
             _cookieLength = c_InitialCookieLength * multiplierFromInit;
+            CookieScale = multiplierFromInit;
         }
     }
 }

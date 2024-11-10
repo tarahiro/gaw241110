@@ -49,7 +49,6 @@ namespace gaw241110.view
 
         public void OnClicked(int i)
         {
-            Log.DebugLog("OnClick:" + i);
             CardSelected?.Invoke(_args[i].SkillId);
         }
     }

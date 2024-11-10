@@ -40,7 +40,6 @@ namespace gaw241110.view
 
         public void SeaLevelUp()
         {
-            Log.DebugLog("SeaLevelUp");
             _seaLevel++;
             _nextSeaLevelAltitude = NextSeaLevelAltitude();
 
