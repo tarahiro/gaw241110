@@ -29,7 +29,9 @@ namespace gaw241110.Editor
             Description = 3,
             CardImagePath = 4,
             SkillKey = 5,
-            SkillArg = 6,
+            SkillLevel = 6,
+            SkillArg = 7,
+            CoreSkillKey = 8,
         }
 
         //--------------------------------------------------------------------
@@ -73,7 +75,9 @@ namespace gaw241110.Editor
                             SettableDescription = sheet[row, (int)Columns.Description].String,
                             SettableCardImagePath = sheet[row, (int)Columns.CardImagePath].String,
                             SettableSkillKey = sheet[row, (int)Columns.SkillKey].String,
+                            SettableSkillLevel = sheet[row, (int)Columns.SkillLevel].Int,
                             SettableSkillArg = sheet[row, (int)Columns.SkillArg].Float,
+                            SettableCoreSkillKey = sheet[row, (int)Columns.CoreSkillKey].String,
                         });
                     }
                 }

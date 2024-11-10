@@ -23,10 +23,12 @@ namespace gaw241110.inject
         {
             Container.BindInterfacesTo<GamePauser>().AsSingle();
 
+            Container.BindInterfacesTo<CookieViewArgsFactory>().AsSingle();
+            Container.BindInterfacesTo<CookieParameter>().AsSingle();
             Container.BindInterfacesTo<SkillMasterDataProvider>().AsSingle();
             Container.BindInterfacesTo<SkillViewArgs>().AsSingle();
             Container.BindInterfacesTo<OfferedSkillViewArgsFactory>().AsSingle();
-            Container.BindInterfacesTo<CardModel>().AsSingle();
+            Container.BindInterfacesTo<SkillLearner>().AsSingle();
             Container.BindInterfacesTo<CardMenuPresenter>().AsSingle();
             Container.BindInterfacesTo<CardMenuView>().FromComponentInHierarchy().AsSingle();
             Container.BindInterfacesTo<CardManager>().AsSingle();
@@ -47,10 +49,11 @@ namespace gaw241110.inject
 
             Container.BindInterfacesTo<SeaModel>().AsSingle();
             Container.BindInterfacesTo<SeaView>().FromComponentInHierarchy().AsSingle();
+            Container.BindInterfacesTo<SeaLevelUpView>().FromComponentInHierarchy().AsSingle();
             Container.BindInterfacesTo<SeaPresenter>().AsSingle();
             Container.BindInterfacesTo<SeaTicker>().AsSingle();
 
-            Container.BindInterfacesTo<AltitudeView>().FromComponentInHierarchy().AsSingle();
+            Container.BindInterfacesTo<AltitudeUiView>().FromComponentInHierarchy().AsSingle();
             Container.BindInterfacesTo<ConverterCookieToExp>().AsSingle();
             Container.BindInterfacesTo<ExpView>().FromComponentInHierarchy().AsSingle();
             Container.BindInterfacesTo<ExpModel>().AsSingle();

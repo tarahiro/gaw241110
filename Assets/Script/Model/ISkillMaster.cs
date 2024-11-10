@@ -22,6 +22,8 @@ namespace gaw241110.model
         string Description{ get; }
         string CardImagePath { get; }
         string SkillKey { get; }
+        int SkillLevel { get; }
         float SkillArg { get; }
+        string CoreSkillKey { get; }
     }
 }

@@ -1,17 +1,18 @@
 using Cysharp.Threading.Tasks;
 using gaw241110;
+using gaw241110.presenter;
 using System;
 using System.Collections;
 using System.Collections.Generic;
 using Tarahiro;
-using UniRx;
 using UnityEngine;
 using Zenject;
 
-namespace gaw241110.presenter
+
+namespace gaw241110.model
 {
-    public interface ICardModel
+    public interface IExpGainer
     {
-        void LearnSkill(string skillId);
+        void GainExpFromCookie(float cookieLength);
     }
 }

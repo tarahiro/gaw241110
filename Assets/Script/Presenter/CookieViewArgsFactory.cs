@@ -4,13 +4,17 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using Tarahiro;
+using UniRx;
 using UnityEngine;
 using Zenject;
 
 namespace gaw241110.presenter
 {
-    public interface IStackedCookieView
+    public class CookieViewArgsFactory : ICookieViewArgsFactory
     {
-        void StackCookie(ICookieViewArgs args);
+        public ICookieViewArgs Create(float length)
+        {
+            return new CookieViewArgs(length);
+        }
     }
 }

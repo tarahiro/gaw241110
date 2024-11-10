@@ -10,9 +10,15 @@ using Zenject;
 
 namespace gaw241110.presenter
 {
-    public interface IAltitudeView
+    public class CookieViewArgs : ICookieViewArgs
     {
-        void UpdateCatAltitude(float altitude);
-        void UpdateSeaAltitude(float altitude);
+        float _length;
+
+        public float Length => _length;
+
+        public CookieViewArgs(float length)
+        {
+            _length = length;
+        }
     }
 }

@@ -13,7 +13,7 @@ namespace gaw241110.presenter
     public class CardMenuPresenter :ICardMenuPresenter,IInitializable
     {
         [Inject] ICardMenuView _view;
-        [Inject] ICardModel _model;
+        [Inject] ISkillLearner _model;
         [Inject] IOfferedSkillViewArgsFactory _argsFactory;
 
         public event Action CardSelected;

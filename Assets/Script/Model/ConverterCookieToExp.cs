@@ -11,13 +11,13 @@ using Zenject;
 
 namespace gaw241110.model
 {
-    public class ConverterCookieToExp : IConverterCookieToExp
+    public class ConverterCookieToExp : IExpGainer
     {
         [Inject] IExpModel _expModel;
 
         const float c_fakeConvertRate = 100f;
 
-        public void Convert(float cookieLength)
+        public void GainExpFromCookie(float cookieLength)
         {
             _expModel.AddExp((int)(cookieLength * c_fakeConvertRate));
         }

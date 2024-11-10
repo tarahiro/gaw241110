@@ -32,7 +32,9 @@ namespace gaw241110.model.masterData
             [SerializeField] string m_Description;
             [SerializeField] string m_CardImagePath;
             [SerializeField] string m_SkillKey;
+            [SerializeField] int m_SkillLevel;
             [SerializeField] float m_SkillArg;
+            [SerializeField] string m_CoreSkillKey;
 
 
             public int Index => m_Index;
@@ -41,7 +43,9 @@ namespace gaw241110.model.masterData
             public string Description => m_Description;
             public string CardImagePath => m_CardImagePath;
             public string SkillKey => m_SkillKey;
+            public int SkillLevel => m_SkillLevel;
             public float SkillArg => m_SkillArg;
+            public string CoreSkillKey => m_CoreSkillKey;
 
             public ISkillMaster GetMaster() => this;
 
@@ -50,7 +54,9 @@ namespace gaw241110.model.masterData
             public string SettableDescription { set => m_Description = value; }
             public string SettableCardImagePath { set => m_CardImagePath = value; }
             public string SettableSkillKey { set => m_SkillKey = value; }
+            public int SettableSkillLevel { set => m_SkillLevel = value; }
             public float SettableSkillArg { set => m_SkillArg = value; }
+            public string SettableCoreSkillKey { set => m_CoreSkillKey = value; }
 
 #endif
         }

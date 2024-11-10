@@ -1,15 +1,17 @@
 using Cysharp.Threading.Tasks;
+using gaw241110;
 using System;
 using System.Collections;
 using System.Collections.Generic;
 using Tarahiro;
+using UniRx;
 using UnityEngine;
 using Zenject;
 
-namespace gaw241110
+namespace gaw241110.presenter
 {
-    public static class GameConst
+    public interface ISeaLevelUpView
     {
-        public const float c_gameClearHeight = 20f;
+        void Show();
     }
 }

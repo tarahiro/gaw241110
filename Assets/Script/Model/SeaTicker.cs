@@ -40,7 +40,7 @@ namespace gaw241110.model
 #endif
 
 
-                _seaModel.AddSea(_seaModel.GetSeaRiseSpeed * Time.deltaTime * coeff);
+                _seaModel.AddSea(Time.deltaTime * coeff);
             }
         }
 

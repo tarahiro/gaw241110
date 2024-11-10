@@ -13,7 +13,7 @@ using Zenject;
 
 namespace gaw241110.view
 {
-    public class AltitudeView:MonoBehaviour,IAltitudeView
+    public class AltitudeUiView:MonoBehaviour,IAltitudeUiView
     {
         [SerializeField] Slider _slider;
         [SerializeField] RectTransform _cat;
@@ -24,7 +24,7 @@ namespace gaw241110.view
         }
 
 
-        public void UpdateCatAltitude(float altitude)
+        public void UpdateBoarderAltitude(float altitude)
         {
             _cat.anchoredPosition = Vector2.up * GetComponent<RectTransform>().sizeDelta.y * altitude / _slider.maxValue;
         }

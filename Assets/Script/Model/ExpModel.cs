@@ -17,7 +17,7 @@ namespace gaw241110.model
         int exp = 0;
         int level = 1;
 
-        const int c_fakeMaxExp = 115;
+        const int c_fakeMaxExp = 330;
         Subject<int> _expUpdated = new Subject<int>();
         Subject<int> _levelUpdated = new Subject<int>();
 
@@ -26,7 +26,7 @@ namespace gaw241110.model
         public IObservable<int> ExpUpdated => _expUpdated;
         public IObservable<int> LevelUpped => _levelUpdated;
         public event Action ShowCardChecked;
-        public int GetMaxExp => c_fakeMaxExp;
+        public int GetMaxExp => MaxExp();
 
         public void InitializeModel(Action<int> expUpdated, Action<int> levelUpped)
         {
@@ -42,7 +42,7 @@ namespace gaw241110.model
         public void AddExp(int addedExp)
         {
             exp += addedExp;
-            if(exp > c_fakeMaxExp)
+            if(exp > MaxExp())
             {
                 LevelUp();
             }
@@ -51,11 +51,16 @@ namespace gaw241110.model
 
         void LevelUp()
         {
-            exp -= c_fakeMaxExp;
+            exp -= MaxExp();
             level++;
             ShowCardChecked?.Invoke();
             _levelUpdated.OnNext(level);
 
+        }
+
+        int MaxExp()
+        {
+            return level * c_fakeMaxExp;
         }
     }
 }
