@@ -28,6 +28,8 @@ public class Const
         }
     }
 
+
+    [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.SubsystemRegistration)]
     public static void RandomIndexList(out List<int> o_indexList, int t_maxNumber)
     {
         List<int> t_intList = new List<int>();
