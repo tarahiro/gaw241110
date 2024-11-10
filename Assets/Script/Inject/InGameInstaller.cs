@@ -24,6 +24,8 @@ namespace gaw241110.inject
             Container.BindInterfacesTo<GamePauser>().AsSingle();
 
             Container.BindInterfacesTo<SkillMasterDataProvider>().AsSingle();
+            Container.BindInterfacesTo<SkillViewArgs>().AsSingle();
+            Container.BindInterfacesTo<OfferedSkillViewArgsFactory>().AsSingle();
             Container.BindInterfacesTo<CardModel>().AsSingle();
             Container.BindInterfacesTo<CardMenuPresenter>().AsSingle();
             Container.BindInterfacesTo<CardMenuView>().FromComponentInHierarchy().AsSingle();

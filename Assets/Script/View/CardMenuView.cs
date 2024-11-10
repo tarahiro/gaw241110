@@ -14,7 +14,16 @@ namespace gaw241110.view
     public class CardMenuView:MonoBehaviour,ICardMenuView
     {
         [SerializeField] GameObject _cardRoot;
+        ICardView[] _viewList;
         public event Action CardSelected;
+
+        [Inject]
+        public void Construct()
+        {
+            Log.DebugLog("Construct");
+            _viewList = _cardRoot.GetComponentsInChildren<ICardView>();
+        }
+
 
         void Start()
         {
@@ -24,6 +33,10 @@ namespace gaw241110.view
         public void Show(List<ISkillViewArgs> args)
         {
             _cardRoot.SetActive(true);
+            for (int i = 0; i < _viewList.Length; i++)
+            {
+                _viewList[i].Show(args[i]);
+            }
 
         }
 

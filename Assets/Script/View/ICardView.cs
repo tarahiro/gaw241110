@@ -15,5 +15,6 @@ namespace gaw241110.view
 {
     public interface ICardView
     {
+        public void Show(ISkillViewArgs args);
     }
 }
