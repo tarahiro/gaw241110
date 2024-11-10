@@ -31,7 +31,6 @@ namespace gaw241110
 
         void OnSelectCard()
         {
-            Log.DebugLog("OnSelectCard");
             _gamePauser.Restart();
             _cardMenuPresenter.Hide();
         }

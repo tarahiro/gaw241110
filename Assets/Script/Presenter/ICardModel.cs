@@ -12,5 +12,6 @@ namespace gaw241110.presenter
 {
     public interface ICardModel
     {
+        void LearnSkill(string skillId);
     }
 }

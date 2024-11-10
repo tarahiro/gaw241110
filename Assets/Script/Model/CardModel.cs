@@ -11,13 +11,14 @@ using Zenject;
 
 namespace gaw241110.model
 {
-    public class CardModel:IInitializable,ICardModel
+    public class CardModel:ICardModel
     {
         [Inject] ISkillMasterDataProvider masterDataProvider;
 
-        public void Initialize()
+
+        public void LearnSkill(string skillId)
         {
-            Log.DebugLog(masterDataProvider.TryGetFromIndex(0).GetMaster().Description);
+            Log.DebugLog(masterDataProvider.TryGetFromId(skillId).GetMaster().SkillKey);
         }
     }
 }

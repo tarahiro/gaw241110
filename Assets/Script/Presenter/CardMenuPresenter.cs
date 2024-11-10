@@ -33,8 +33,9 @@ namespace gaw241110.presenter
             _view.Hide();
         }
 
-        void OnCardSelect()
+        void OnCardSelect(string skillId)
         {
+            _model.LearnSkill(skillId);
             CardSelected?.Invoke();
         }
     }

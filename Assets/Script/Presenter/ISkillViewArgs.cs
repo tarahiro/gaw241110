@@ -12,6 +12,7 @@ namespace gaw241110.presenter
 {
     public interface ISkillViewArgs
     {
+        public string SkillId { get; }
         public string DisplayName { get; }
         public string Description { get; }
         public string ImagePath { get; }

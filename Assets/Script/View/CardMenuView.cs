@@ -15,12 +15,12 @@ namespace gaw241110.view
     {
         [SerializeField] GameObject _cardRoot;
         ICardView[] _viewList;
-        public event Action CardSelected;
+        List<ISkillViewArgs> _args;
+        public event Action<string> CardSelected;
 
         [Inject]
         public void Construct()
         {
-            Log.DebugLog("Construct");
             _viewList = _cardRoot.GetComponentsInChildren<ICardView>();
         }
 
@@ -33,6 +33,8 @@ namespace gaw241110.view
         public void Show(List<ISkillViewArgs> args)
         {
             _cardRoot.SetActive(true);
+
+            _args = args;
             for (int i = 0; i < _viewList.Length; i++)
             {
                 _viewList[i].Show(args[i]);
@@ -45,9 +47,10 @@ namespace gaw241110.view
             _cardRoot.SetActive(false);
         }
 
-        public void OnClicked()
+        public void OnClicked(int i)
         {
-            CardSelected?.Invoke();
+            Log.DebugLog("OnClick:" + i);
+            CardSelected?.Invoke(_args[i].SkillId);
         }
     }
 }

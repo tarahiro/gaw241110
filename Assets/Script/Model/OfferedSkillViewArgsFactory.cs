@@ -22,15 +22,15 @@ namespace gaw241110.model
             //‚Æ‚è‚ ‚¦‚¸‡”Ô‚Éo‚·
             for (int i = 0; i < masterDataProvider.Count; i++)
             {
-                list.Add(Covert(masterDataProvider.TryGetFromIndex(i).GetMaster()));
+                list.Add(Convert(masterDataProvider.TryGetFromIndex(i).GetMaster()));
             }
 
             return list;
         }
 
-        ISkillViewArgs Covert(ISkillMaster master)
+        ISkillViewArgs Convert(ISkillMaster master)
         {
-            return new SkillViewArgs(master.DisplayName, master.Description, master.CardImagePath);
+            return new SkillViewArgs(master.Id, master.DisplayName, master.Description, master.CardImagePath);
         }
     }
 }

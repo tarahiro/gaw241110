@@ -16,6 +16,6 @@ namespace gaw241110.presenter
         void Show(List<ISkillViewArgs> args);
         void Hide();
         //ここでカードの引数を渡す、今は決め打ち
-        event Action CardSelected;
+        event Action<string> CardSelected;
     }
 }
