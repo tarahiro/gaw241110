@@ -25,7 +25,9 @@ namespace gaw241110.inject
 
             Container.BindInterfacesTo<GamePauser>().AsSingle();
 
-            Container.BindInterfacesTo<CookieViewArgsFactory>().AsSingle();
+
+
+            Container.BindInterfacesTo<StackedObjViewArgsFactory>().AsSingle();
             Container.BindInterfacesTo<CookieParameter>().AsSingle();
 
             Container.BindInterfacesTo<SkillMasterDataProvider>().AsSingle();
@@ -44,10 +46,13 @@ namespace gaw241110.inject
             Container.BindInterfacesTo<CheckGamePresenter>().AsSingle();
             Container.BindInterfacesTo<EndGameManager>().AsSingle();
 
-            Container.BindInterfacesTo<StackedCookieView>().FromComponentInHierarchy().AsSingle();
+
+            Container.BindInterfacesTo<CookieModel>().AsSingle();
+            Container.BindInterfacesTo<StackedObjPresenter>().AsSingle();
+            Container.BindInterfacesTo<StackedObjView>().FromComponentInHierarchy().AsSingle();
             Container.BindInterfacesTo<CatView>().FromComponentInHierarchy().AsSingle();
             Container.BindInterfacesTo<CookieView>().FromComponentInHierarchy().AsSingle();
-            Container.BindInterfacesTo<CookieModel>().AsSingle();
+            Container.BindInterfacesTo<StackedObjModel>().AsSingle();
             Container.BindInterfacesTo<CookiePresenter>().AsSingle();
 
             Container.BindInterfacesTo<SeaModel>().AsSingle();

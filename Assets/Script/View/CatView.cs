@@ -11,7 +11,7 @@ using Zenject;
 
 namespace gaw241110.view
 {
-    public class CatView:MonoBehaviour,IBoardableOnCookie, IGameOverableView
+    public class CatView:MonoBehaviour,IBoardable, IGameOverableView
     {
         [SerializeField] Transform _gameOverHorizon;
 

@@ -10,18 +10,17 @@ using Zenject;
 
 namespace gaw241110.presenter
 {
-    public class CookieViewArgs : ICookieViewArgs
+    public class StackedObjViewArgs : IStackedObjViewArgs
     {
-        float _length;
 
         public string PrefabName { get; set; }
-        public float Length => _length;
+        public float Length { get; set; }
         public float Scale { get; set; }
 
-        public CookieViewArgs(string prefabName, float length, float scale)
+        public StackedObjViewArgs(string prefabName, float length, float scale)
         {
             PrefabName = prefabName;
-            _length = length;
+            Length = length;
             Scale = scale;
         }
     }

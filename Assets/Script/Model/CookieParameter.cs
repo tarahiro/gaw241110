@@ -16,25 +16,19 @@ namespace gaw241110.model
         const int c_InitialAddedCookieNumber = 1;
         const float c_InitialCookieLength = .2f;
 
-        int _addedCookieNumber = c_InitialAddedCookieNumber;
-        float _cookieLength = c_InitialCookieLength;
-
-
-
-        public int AddedCookieNumber => _addedCookieNumber;
-        public float CookieLength => _cookieLength;
-
-        public float CookieScale { get; set; } = 1f;
+        public int AddedCookieNumber { get; set; } = c_InitialAddedCookieNumber;
+        public float Length { get; set; } = c_InitialCookieLength;
+        public float Scale { get; set; } = 1f;
 
         public void MultiplyAddedCookieNumber(int multiplierFromInit)
         {
-            _addedCookieNumber = c_InitialAddedCookieNumber * multiplierFromInit;
+            AddedCookieNumber = c_InitialAddedCookieNumber * multiplierFromInit;
         }
 
-        public void MultiplyCookieLength(float multiplierFromInit)
+        public void MultiplyLength(float multiplierFromInit)
         {
-            _cookieLength = c_InitialCookieLength * multiplierFromInit;
-            CookieScale = multiplierFromInit;
+            Length = c_InitialCookieLength * multiplierFromInit;
+            Scale = multiplierFromInit;
         }
     }
 }

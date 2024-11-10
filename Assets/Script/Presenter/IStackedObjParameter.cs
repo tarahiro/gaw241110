@@ -9,10 +9,12 @@ using UnityEngine;
 using Zenject;
 
 
-namespace gaw241110.view
+namespace gaw241110.model
 {
-    public interface IBoardableOnCookie
+    public interface IStackedObjParameter
     {
-        void BoardCookie(Vector3 localPosition);
+        float Length { get; }
+        float Scale { get; }
+        void MultiplyLength(float multiplierFromInit);
     }
 }

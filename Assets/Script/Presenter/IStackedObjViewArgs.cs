@@ -10,8 +10,10 @@ using Zenject;
 
 namespace gaw241110.presenter
 {
-    public interface ICookieModel
+    public interface IStackedObjViewArgs
     {
-        void AddStackedObj();
+        string PrefabName { get; }
+        float Length { get; }
+        float Scale { get; }
     }
 }

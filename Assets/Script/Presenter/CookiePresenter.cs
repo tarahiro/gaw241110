@@ -16,10 +16,6 @@ namespace gaw241110.presenter
         [Inject] IClickCookieView _view;
 
         [Inject] ICookieModel _model;
-
-        [Inject] IStackedCookieView _stackedCookieView;
-
-        [Inject] IAltitudeUiView _altitudeView;
         #endregion
 
 
@@ -27,23 +23,12 @@ namespace gaw241110.presenter
         public void Initialize()
         {
             _view.Clicked += OnClicked;
-            _model.InitializeModel(OnCookieAdded, OnCookieAltitudeElevated);
         }
 
 
         void OnClicked()
         {
-            _model.AddCookie();
-        }
-
-        void OnCookieAdded(ICookieViewArgs args)
-        {
-            _stackedCookieView.StackCookie(args);
-        }
-
-        void OnCookieAltitudeElevated(float altitude)
-        {
-            _altitudeView.UpdateBoarderAltitude(altitude);
+            _model.AddStackedObj();
         }
 
 

@@ -39,7 +39,7 @@ namespace gaw241110.model
             switch (master.SkillKey)
             {
                 case "CookieHeightUp":
-                    cookieParameter.MultiplyCookieLength(master.SkillArg);
+                    cookieParameter.MultiplyLength(master.SkillArg);
                     break;
 
                case "CookieNumberUp":

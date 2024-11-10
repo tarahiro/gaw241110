@@ -11,14 +11,10 @@ using Zenject;
 
 namespace gaw241110.model
 {
-    public interface ICookieParameter
+    public interface ICookieParameter : IStackedObjParameter
     {
         int AddedCookieNumber { get; }
 
-        float CookieLength { get; }
-        float CookieScale { get; }
-
         void MultiplyAddedCookieNumber(int multiplierFromInit);
-        void MultiplyCookieLength(float multiplierFromInit);
     }
 }
