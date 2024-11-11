@@ -9,11 +9,8 @@ using Zenject;
 
 namespace gaw241110.presenter
 {
-    public interface IClickCookieView
+    public interface IClickCookieView : IPauseable
     {
         event Action Clicked;
-
-        void StopClickAccept();
-        void AcceptClick();
     }
 }

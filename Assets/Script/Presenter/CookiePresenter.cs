@@ -32,15 +32,5 @@ namespace gaw241110.presenter
         }
 
 
-        public void OnPause(PauseSignal signal)
-        {
-            _view.StopClickAccept();
-        }
-        public void OnResume(ResumeSignal signal)
-        {
-            _view.AcceptClick();
-        }
-
-
     }
 }

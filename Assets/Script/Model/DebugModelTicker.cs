@@ -16,12 +16,18 @@ namespace gaw241110.model
     {
 
         [Inject] ICardManager cardManager;
+        [Inject] MochiPresenter mochiPresenter;
 
         public void Tick()
         {
             if (Input.GetKeyDown(KeyCode.Q))
             {
                 cardManager.ShowCard();
+            }
+
+            if (Input.GetKeyDown(KeyCode.R))
+            {
+                mochiPresenter.AddMochiMenuView();
             }
         }
     }

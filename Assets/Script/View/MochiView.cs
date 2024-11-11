@@ -5,6 +5,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using Tarahiro;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 using Zenject;
@@ -12,11 +13,17 @@ using Zenject;
 
 namespace gaw241110.view
 {
-    public class CookieView : MonoBehaviour, IClickCookieView
+    public class MochiView : MonoBehaviour, IMochiView
     {
         [SerializeField] Button _button;
 
         public event Action Clicked;
+
+
+        public void Start()
+        {
+            _button.onClick.AddListener(OnClick);
+        }
 
         public void OnClick()
         {
