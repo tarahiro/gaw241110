@@ -50,7 +50,8 @@ namespace gaw241110.inject
             Container.BindInterfacesTo<MochiParameter>().AsSingle();
             Container.BindInterfacesTo<MochiModel>().AsSingle();
             Container.BindInterfacesTo<MochiMenuView>().FromComponentInHierarchy().AsSingle();
-            Container.BindInterfacesTo<MochiView>().FromComponentInHierarchy().AsSingle();
+
+            Container.Bind<IPauseable>().To<MochiView>().FromComponentsInHierarchy().AsSingle();
 
             Container.BindInterfacesTo<CookieModel>().AsSingle();
             Container.BindInterfacesTo<StackedObjPresenter>().AsSingle();

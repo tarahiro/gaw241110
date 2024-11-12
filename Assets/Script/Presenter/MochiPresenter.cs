@@ -28,7 +28,6 @@ namespace gaw241110.presenter
         void OnClicked()
         {
             _model.AddStackedObj();
-            Log.DebugLog("MochiClicked");
         }
     }
 }
