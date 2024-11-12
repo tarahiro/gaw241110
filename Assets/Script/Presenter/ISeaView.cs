@@ -12,5 +12,6 @@ namespace gaw241110.presenter
     public interface ISeaView
     {
         void RiseSea(float seaLevel);
+        float GetSeaHeight { get; }
     }
 }

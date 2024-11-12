@@ -13,7 +13,7 @@ namespace gaw241110.model
 {
     public class MochiParameter : IMochiParameter
     {
-        const float c_InitialStackedObjLength = 2f;
+        const float c_InitialStackedObjLength = 5f;
         const float c_InitialFillTime = 5f;
         int _clickerNumber = 0;
         float _fillTime = c_InitialFillTime;

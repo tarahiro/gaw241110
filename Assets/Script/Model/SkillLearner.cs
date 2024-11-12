@@ -16,6 +16,7 @@ namespace gaw241110.model
         [Inject] ISkillMasterDataProvider masterDataProvider;
         [Inject] ICookieParameter cookieParameter;
         [Inject] IMochiParameter mochiParameter;
+        [Inject] ISeaParameter seaParameter;
 
         List<string> _list;
 
@@ -60,7 +61,7 @@ namespace gaw241110.model
                     break;
 
                 case "SeaSpeedDown":
-                    Log.DebugLog("–¢ŽÀ‘•");
+                    seaParameter.MultiplySeaRiseSpeed(master.SkillArg);
                     break;
 
                 default:

@@ -12,11 +12,8 @@ namespace gaw241110.presenter
     public interface ISeaModel
     {
         float GetSeaAltitude { get; }
-        float GetSeaRiseSpeed { get; }
-        float GetNextSeaLevelAltitude { get; }
         IObservable<float> SeaRisen { get; }
-        event Action SeaLevelUpped;
         void AddSea(float deltaTime);
-        void SeaLevelUp();
+        void StartModel(Action<float> risen, Action levelUpped);
     }
 }

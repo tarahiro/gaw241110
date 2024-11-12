@@ -1,5 +1,6 @@
 using Cysharp.Threading.Tasks;
 using gaw241110;
+using gaw241110.model;
 using gaw241110.presenter;
 using System;
 using System.Collections;
@@ -12,50 +13,26 @@ using Zenject;
 
 namespace gaw241110.view
 {
-    public class SeaModel: ISeaModel,IInitializable
+    public class SeaModel: ISeaModel
     {
+        [Inject] ISeaParameter _parameter;
         float _seaAltitude = 0;
-        float _seaRiseSpeed = .2f;
-        int _seaLevel = 0;
         Subject<float> _seaRisen = new Subject<float>();
 
-        const float _fakeSeaAltitudeForLevel = 2f;
-        float _nextSeaLevelAltitude;
-
         public float GetSeaAltitude => _seaAltitude;
-        public float GetSeaRiseSpeed => _seaRiseSpeed;
-        public float GetNextSeaLevelAltitude => _nextSeaLevelAltitude;
         public IObservable<float> SeaRisen => _seaRisen;
-        public event Action SeaLevelUpped;
-        public void Initialize()
+
+
+        public void StartModel(Action<float> risen,Action seaLevelUpped)
         {
-            _nextSeaLevelAltitude = NextSeaLevelAltitude();
+            _seaRisen.Subscribe(risen);
+            _parameter.SeaLevelUpped += seaLevelUpped;
         }
 
         public void AddSea(float deltaTime)
         {
-            _seaAltitude += deltaTime * SeaRiseSpeed();
+            _seaAltitude += deltaTime * _parameter.GetSeaRiseSpeed;
             _seaRisen.OnNext(_seaAltitude);
-        }
-
-        public void SeaLevelUp()
-        {
-            _seaLevel++;
-            _nextSeaLevelAltitude = NextSeaLevelAltitude();
-
-            SeaLevelUpped.Invoke();
-        }
-
-        float SeaRiseSpeed()
-        {
-            return _seaLevel * _seaRiseSpeed;
-        }
-
-        //「ここを超えたら次のレベルになる」という高度
-        // 1+2+3+4+...
-        float NextSeaLevelAltitude()
-        {
-            return _fakeSeaAltitudeForLevel * (_seaLevel * (_seaLevel + 1) * .5f);
         }
     }
 }

@@ -19,8 +19,7 @@ namespace gaw241110.presenter
 
         public void Initialize()
         {
-            _model.SeaRisen.Subscribe(OnRiseSea);
-            _model.SeaLevelUpped += OnSeaLevelUp;
+            _model.StartModel(OnRiseSea, OnSeaLevelUp);
         }
         public void StopSea()
         {

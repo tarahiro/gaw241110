@@ -23,6 +23,7 @@ namespace gaw241110.inject
         {
             Container.BindInterfacesTo<DebugModelTicker>().AsSingle();
 
+            Container.BindInterfacesTo<CheckGameOverView>().FromComponentInHierarchy().AsSingle();
             Container.BindInterfacesTo<GamePauser>().AsSingle();
 
 
@@ -61,6 +62,7 @@ namespace gaw241110.inject
             Container.BindInterfacesTo<StackedObjModel>().AsSingle();
             Container.BindInterfacesTo<CookiePresenter>().AsSingle();
 
+            Container.BindInterfacesTo<SeaParameter>().AsSingle();
             Container.BindInterfacesTo<SeaModel>().AsSingle();
             Container.BindInterfacesTo<SeaView>().FromComponentInHierarchy().AsSingle();
             Container.BindInterfacesTo<SeaLevelUpView>().FromComponentInHierarchy().AsSingle();

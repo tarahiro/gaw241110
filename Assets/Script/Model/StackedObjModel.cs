@@ -17,6 +17,7 @@ namespace gaw241110.model
         [Inject] IExpGainer _expGainer;
         [Inject] IStackedObjViewArgsFactory _viewArgsFactory;
         [Inject] ISeaModel _seaModel;
+        [Inject] ISeaParameter _seaParameter;
 
         float _stackedCookieHeight = 0f;
 
@@ -50,9 +51,9 @@ namespace gaw241110.model
             _expGainer.GainExpFromCookie(parameter.Length);
 
             //ŠCƒŒƒxƒ‹Šm”F
-            if(_stackedCookieHeight > _seaModel.GetNextSeaLevelAltitude)
+            if(_stackedCookieHeight > _seaParameter.GetNextSeaLevelAltitude)
             {
-                _seaModel.SeaLevelUp();
+                _seaParameter.SeaLevelUp();
             }
             if (_stackedCookieHeight > GameConst.c_gameClearHeight)
             {
