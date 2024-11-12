@@ -15,7 +15,6 @@ namespace gaw241110.model
     public class StackedObjModel : IStackedObjModel,IGameClearCheckable
     {
         [Inject] IExpGainer _expGainer;
-        [Inject] ICookieParameter _parameter;
         [Inject] IStackedObjViewArgsFactory _viewArgsFactory;
         [Inject] ISeaModel _seaModel;
 
@@ -40,15 +39,15 @@ namespace gaw241110.model
         public void AddStackedObj(string prefabName, IStackedObjParameter parameter)
         {
             //自身の変数を整理
-            _stackedCookieHeight += _parameter.Length;
+            _stackedCookieHeight += parameter.Length;
 
             //デリゲート実行
-            _objAdded?.Invoke(_viewArgsFactory.Create(prefabName, _parameter.Length, _parameter.Scale));
+            _objAdded?.Invoke(_viewArgsFactory.Create(prefabName, parameter.Length, parameter.Scale));
             _cookieAltitudeElevated.OnNext(_stackedCookieHeight);
 
             //他処理
             //経験値
-            _expGainer.GainExpFromCookie(_parameter.Length);
+            _expGainer.GainExpFromCookie(parameter.Length);
 
             //海レベル確認
             if(_stackedCookieHeight > _seaModel.GetNextSeaLevelAltitude)

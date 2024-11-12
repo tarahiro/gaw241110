@@ -27,7 +27,7 @@ namespace gaw241110.model
 
             if (Input.GetKeyDown(KeyCode.R))
             {
-                mochiPresenter.AddMochiMenuView();
+                mochiPresenter.AddMochiView();
             }
         }
     }

@@ -46,9 +46,11 @@ namespace gaw241110.inject
             Container.BindInterfacesTo<CheckGamePresenter>().AsSingle();
             Container.BindInterfacesTo<EndGameManager>().AsSingle();
 
+            Container.BindInterfacesAndSelfTo<MochiPresenter>().AsSingle();
+            Container.BindInterfacesTo<MochiParameter>().AsSingle();
+            Container.BindInterfacesTo<MochiModel>().AsSingle();
             Container.BindInterfacesTo<MochiMenuView>().FromComponentInHierarchy().AsSingle();
             Container.BindInterfacesTo<MochiView>().FromComponentInHierarchy().AsSingle();
-            Container.Bind<MochiPresenter>().AsSingle();
 
             Container.BindInterfacesTo<CookieModel>().AsSingle();
             Container.BindInterfacesTo<StackedObjPresenter>().AsSingle();

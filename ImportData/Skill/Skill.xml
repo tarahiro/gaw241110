@@ -88,7 +88,7 @@
   </Style>
  </Styles>
  <Worksheet ss:Name="Script">
-  <Table ss:ExpandedColumnCount="9" ss:ExpandedRowCount="10" x:FullColumns="1"
+  <Table ss:ExpandedColumnCount="9" ss:ExpandedRowCount="13" x:FullColumns="1"
    x:FullRows="1" ss:DefaultColumnWidth="52.5" ss:DefaultRowHeight="18">
    <Column ss:AutoFitWidth="0" ss:Width="30"/>
    <Column ss:AutoFitWidth="0" ss:Width="146.5"/>
@@ -110,7 +110,7 @@
     <Cell ss:StyleID="s65"><Data ss:Type="String">CoreSkillKey</Data></Cell>
    </Row>
    <Row ss:AutoFitHeight="0">
-    <Cell ss:StyleID="s67"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s67" ss:Formula="=ROW()-5"><Data ss:Type="Number">0</Data></Cell>
     <Cell ss:StyleID="s67"><Data ss:Type="String">CookieHeightUp1</Data></Cell>
     <Cell ss:StyleID="s67"><PhoneticText
       xmlns="urn:schemas-microsoft-com:office:excel">タカバイ</PhoneticText><Data
@@ -125,7 +125,7 @@
     <Cell ss:StyleID="s67"/>
    </Row>
    <Row ss:AutoFitHeight="0">
-    <Cell ss:StyleID="s67"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s67" ss:Formula="=ROW()-5"><Data ss:Type="Number">1</Data></Cell>
     <Cell ss:StyleID="s67"><Data ss:Type="String">CookieHeightUp2</Data></Cell>
     <Cell ss:StyleID="s67"><PhoneticText
       xmlns="urn:schemas-microsoft-com:office:excel">タカバイ</PhoneticText><Data
@@ -140,7 +140,7 @@
     <Cell ss:StyleID="s67"><Data ss:Type="String">CookieHeightUp1</Data></Cell>
    </Row>
    <Row ss:AutoFitHeight="0">
-    <Cell ss:StyleID="s67"><Data ss:Type="Number">2</Data></Cell>
+    <Cell ss:StyleID="s67" ss:Formula="=ROW()-5"><Data ss:Type="Number">2</Data></Cell>
     <Cell ss:StyleID="s67"><Data ss:Type="String">CookieNumberUp1</Data></Cell>
     <Cell ss:StyleID="s67"><PhoneticText
       xmlns="urn:schemas-microsoft-com:office:excel">カズバイ</PhoneticText><Data
@@ -155,7 +155,7 @@
     <Cell ss:StyleID="s67"/>
    </Row>
    <Row ss:AutoFitHeight="0">
-    <Cell ss:StyleID="s67"><Data ss:Type="Number">3</Data></Cell>
+    <Cell ss:StyleID="s67" ss:Formula="=ROW()-5"><Data ss:Type="Number">3</Data></Cell>
     <Cell ss:StyleID="s67"><Data ss:Type="String">CookieNumberUp2</Data></Cell>
     <Cell ss:StyleID="s67"><PhoneticText
       xmlns="urn:schemas-microsoft-com:office:excel">スウバイ</PhoneticText><Data
@@ -170,7 +170,52 @@
     <Cell ss:StyleID="s67"><Data ss:Type="String">CookieNumberUp1</Data></Cell>
    </Row>
    <Row ss:AutoFitHeight="0">
-    <Cell ss:StyleID="s67"><Data ss:Type="Number">4</Data></Cell>
+    <Cell ss:StyleID="s67" ss:Formula="=ROW()-5"><Data ss:Type="Number">4</Data></Cell>
+    <Cell ss:StyleID="s67"><Data ss:Type="String">MochiClickerAdd1</Data></Cell>
+    <Cell ss:StyleID="s67"><PhoneticText
+      xmlns="urn:schemas-microsoft-com:office:excel">ツイカ</PhoneticText><Data
+      ss:Type="String">モチ追加</Data></Cell>
+    <Cell ss:StyleID="s67"><PhoneticText
+      xmlns="urn:schemas-microsoft-com:office:excel">タカバイ</PhoneticText><Data
+      ss:Type="String">クッキー高さが2倍になる。</Data></Cell>
+    <Cell ss:StyleID="s67"><Data ss:Type="String">Fake</Data></Cell>
+    <Cell ss:StyleID="s67"><Data ss:Type="String">MochiClickerAdd</Data></Cell>
+    <Cell ss:StyleID="s67"><Data ss:Type="Number">2</Data></Cell>
+    <Cell ss:StyleID="s67"><Data ss:Type="Number">3</Data></Cell>
+    <Cell ss:StyleID="s67"/>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s67" ss:Formula="=ROW()-5"><Data ss:Type="Number">5</Data></Cell>
+    <Cell ss:StyleID="s67"><Data ss:Type="String">MochiHeightUp1</Data></Cell>
+    <Cell ss:StyleID="s67"><PhoneticText
+      xmlns="urn:schemas-microsoft-com:office:excel">タカバイ</PhoneticText><Data
+      ss:Type="String">モチ高さ2倍</Data></Cell>
+    <Cell ss:StyleID="s67"><PhoneticText
+      xmlns="urn:schemas-microsoft-com:office:excel">タカバイ</PhoneticText><Data
+      ss:Type="String">クッキー高さが2倍になる。</Data></Cell>
+    <Cell ss:StyleID="s67"><Data ss:Type="String">Fake</Data></Cell>
+    <Cell ss:StyleID="s67"><Data ss:Type="String">MochiHeightUp</Data></Cell>
+    <Cell ss:StyleID="s67"><Data ss:Type="Number">2</Data></Cell>
+    <Cell ss:StyleID="s67"><Data ss:Type="Number">3</Data></Cell>
+    <Cell ss:StyleID="s67"><Data ss:Type="String">MochiClickerAdd1</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s67" ss:Formula="=ROW()-5"><Data ss:Type="Number">6</Data></Cell>
+    <Cell ss:StyleID="s67"><Data ss:Type="String">MochiHeightUp2</Data></Cell>
+    <Cell ss:StyleID="s67"><PhoneticText
+      xmlns="urn:schemas-microsoft-com:office:excel">タカバイ</PhoneticText><Data
+      ss:Type="String">モチ高さ3倍</Data></Cell>
+    <Cell ss:StyleID="s67"><PhoneticText
+      xmlns="urn:schemas-microsoft-com:office:excel">タカバイ</PhoneticText><Data
+      ss:Type="String">クッキー高さが2倍になる。</Data></Cell>
+    <Cell ss:StyleID="s67"><Data ss:Type="String">Fake</Data></Cell>
+    <Cell ss:StyleID="s67"><Data ss:Type="String">MochiHeightUp</Data></Cell>
+    <Cell ss:StyleID="s67"><Data ss:Type="Number">2</Data></Cell>
+    <Cell ss:StyleID="s67"><Data ss:Type="Number">3</Data></Cell>
+    <Cell ss:StyleID="s67"><Data ss:Type="String">MochiHeightUp1</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s67" ss:Formula="=ROW()-5"><Data ss:Type="Number">7</Data></Cell>
     <Cell ss:StyleID="s67"><Data ss:Type="String">SeaSpeedDown1</Data></Cell>
     <Cell ss:StyleID="s67"><PhoneticText
       xmlns="urn:schemas-microsoft-com:office:excel">ウミジョウショウソクドバイ</PhoneticText><Data
@@ -185,7 +230,7 @@
     <Cell ss:StyleID="s67"/>
    </Row>
    <Row ss:AutoFitHeight="0">
-    <Cell ss:StyleID="s67"><Data ss:Type="Number">5</Data></Cell>
+    <Cell ss:StyleID="s67" ss:Formula="=ROW()-5"><Data ss:Type="Number">8</Data></Cell>
     <Cell ss:StyleID="s67"><Data ss:Type="String">Cat1</Data></Cell>
     <Cell ss:StyleID="s67"><Data ss:Type="String">ねこ</Data></Cell>
     <Cell ss:StyleID="s67"><Data ss:Type="String">こうかはないよ</Data></Cell>
@@ -215,29 +260,15 @@
    <Panes>
     <Pane>
      <Number>3</Number>
-     <ActiveRow>7</ActiveRow>
-     <ActiveCol>8</ActiveCol>
+     <ActiveRow>8</ActiveRow>
+     <ActiveCol>10</ActiveCol>
     </Pane>
    </Panes>
    <ProtectObjects>False</ProtectObjects>
    <ProtectScenarios>False</ProtectScenarios>
   </WorksheetOptions>
   <ConditionalFormatting xmlns="urn:schemas-microsoft-com:office:excel">
-   <Range>R5C1:R9C8</Range>
-   <Condition>
-    <Value1>LEN(TRIM(RC))=0</Value1>
-    <Format Style='background:#E7E6E6'/>
-   </Condition>
-  </ConditionalFormatting>
-  <ConditionalFormatting xmlns="urn:schemas-microsoft-com:office:excel">
-   <Range>R5C9:R10C9</Range>
-   <Condition>
-    <Value1>LEN(TRIM(RC))=0</Value1>
-    <Format Style='background:#E7E6E6'/>
-   </Condition>
-  </ConditionalFormatting>
-  <ConditionalFormatting xmlns="urn:schemas-microsoft-com:office:excel">
-   <Range>R10C1:R10C8</Range>
+   <Range>R5C1:R13C9</Range>
    <Condition>
     <Value1>LEN(TRIM(RC))=0</Value1>
     <Format Style='background:#E7E6E6'/>

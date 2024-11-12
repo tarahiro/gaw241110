@@ -15,6 +15,7 @@ namespace gaw241110.model
     {
         [Inject] ISkillMasterDataProvider masterDataProvider;
         [Inject] ICookieParameter cookieParameter;
+        [Inject] IMochiParameter mochiParameter;
 
         List<string> _list;
 
@@ -46,7 +47,15 @@ namespace gaw241110.model
                     cookieParameter.MultiplyAddedCookieNumber((int)master.SkillArg);
                     break;
 
-               case "SeaSpeedDown":
+                case "MochiClickerAdd":
+                    mochiParameter.AddMochiClicker();
+                    break;
+
+                case "MochiHeightUp":
+                    mochiParameter.MultiplyLength(master.SkillArg);
+                    break;
+
+                case "SeaSpeedDown":
                     Log.DebugLog("–¢ŽÀ‘•");
                     break;
 
