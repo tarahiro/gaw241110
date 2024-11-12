@@ -16,6 +16,13 @@ namespace gaw241110.model
         float GetNextSeaLevelAltitude { get; }
         float GetSeaRiseSpeed { get; }
 
+        float GetWarningSeaSpeedMultiplier { get; }
+        float GetSilentSeaSpeedMultiplier { get; }
+        float GetWarningSeaTime { get; }
+        float GetSilentSeaTime { get; }
+
+        float[] GetWarningSeaAltitude { get; }
+
         event Action SeaLevelUpped;
         void SeaLevelUp();
 

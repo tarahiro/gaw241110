@@ -23,6 +23,8 @@ namespace gaw241110.inject
         {
             Container.BindInterfacesTo<DebugModelTicker>().AsSingle();
 
+            Container.BindInterfacesTo<GameClearFloater>().FromComponentInHierarchy().AsSingle();
+            Container.BindInterfacesTo<ScreenFader>().FromComponentInHierarchy().AsSingle();
             Container.BindInterfacesTo<CheckGameOverView>().FromComponentInHierarchy().AsSingle();
             Container.BindInterfacesTo<GamePauser>().AsSingle();
 
@@ -44,7 +46,7 @@ namespace gaw241110.inject
             Container.Bind<GameOverView>().FromComponentInHierarchy().AsSingle();
             Container.Bind<GameClearView>().FromComponentInHierarchy().AsSingle();
 
-            Container.BindInterfacesTo<CheckGamePresenter>().AsSingle();
+            Container.BindInterfacesAndSelfTo<CheckGamePresenter>().AsSingle();
             Container.BindInterfacesTo<EndGameManager>().AsSingle();
 
             Container.BindInterfacesAndSelfTo<MochiPresenter>().AsSingle();

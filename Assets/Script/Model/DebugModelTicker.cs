@@ -17,6 +17,7 @@ namespace gaw241110.model
 
         [Inject] ICardManager cardManager;
         [Inject] MochiPresenter mochiPresenter;
+        [Inject] CheckGamePresenter checkGamePresenter;
 
         public void Tick()
         {
@@ -28,6 +29,11 @@ namespace gaw241110.model
             if (Input.GetKeyDown(KeyCode.R))
             {
                 mochiPresenter.OnAddMochiClicker();
+            }
+
+            if (Input.GetKeyDown(KeyCode.T))
+            {
+                checkGamePresenter.OnGameClear();
             }
         }
     }

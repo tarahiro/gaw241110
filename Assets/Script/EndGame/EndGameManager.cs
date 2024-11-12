@@ -30,7 +30,7 @@ namespace gaw241110.endgame
             EndGame("GameOver");
         }
 
-        void GameClear()
+        public void GameClear()
         {
             EndGame("GameClear");
         }

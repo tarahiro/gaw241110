@@ -35,7 +35,7 @@ namespace gaw241110.presenter
             GameOvered?.Invoke();
         }
 
-        void OnGameClear()
+        public void OnGameClear()
         {
             GameCleared?.Invoke();
         }

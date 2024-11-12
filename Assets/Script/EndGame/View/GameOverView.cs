@@ -38,6 +38,7 @@ namespace gaw241110.endgame.view
         public void Show()
         {
             _description.SetActive (true);
+            AcceptInput();
         }
         public void Hide()
         {

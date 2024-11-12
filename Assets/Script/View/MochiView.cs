@@ -83,7 +83,6 @@ namespace gaw241110.view
         {
             _fillTime = time;
             UpdateImageGauge();
-            Log.DebugLog(_fillTime.ToString());
         }
 
         void UpdateImageGauge()

@@ -18,10 +18,22 @@ namespace gaw241110.model
         float _seaSpeedMultiplyer = 1f;
 
         const float _fakeSeaAltitudeForLevel = 2f;
+        const float _warningSeaSpeedMultiplier = 3f;
+        const float _silentSeaSpeedMultiplier = .2f;
+        const float _warningSeaTime = 3f;
+        const float _silentSeaTime = 3f;
+
+        readonly float[] _warningSeaAltitude = new float[2] { 80f, 150f };
+
         float _nextSeaLevelAltitude;
         float _seaRiseSpeed;
         public float GetNextSeaLevelAltitude => _nextSeaLevelAltitude;
         public float GetSeaRiseSpeed => _seaRiseSpeed;
+        public float GetWarningSeaSpeedMultiplier => _warningSeaSpeedMultiplier;
+        public float GetSilentSeaSpeedMultiplier => _silentSeaSpeedMultiplier;
+        public float GetWarningSeaTime => _warningSeaTime;
+        public float GetSilentSeaTime => _silentSeaTime;
+        public float[] GetWarningSeaAltitude => _warningSeaAltitude;
 
         public event Action SeaLevelUpped;
 

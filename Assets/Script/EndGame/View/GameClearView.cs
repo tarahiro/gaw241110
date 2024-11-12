@@ -13,6 +13,9 @@ namespace gaw241110.endgame.view
 {
     public class GameClearView : MonoBehaviour, IEndGameView
     {
+        [Inject] IScreenFader _screenFader;
+        [Inject] IGameClearFloater _gameClearFloater;
+
         bool _isAcceptInput = false;
         [SerializeField] GameObject _description;
 
@@ -37,8 +40,19 @@ namespace gaw241110.endgame.view
 
         public void Show()
         {
-            _description.SetActive (true);
+            Enter().Forget();
         }
+
+        async UniTask Enter()
+        {
+            await _gameClearFloater.Float();
+            await _screenFader.FadeIn(1f);
+            await UniTask.WaitForSeconds(1f);
+            _description.SetActive(true);
+            await _screenFader.FadeOut(1f);
+            AcceptInput();
+        }
+
         public void Hide()
         {
             _description.SetActive(false);

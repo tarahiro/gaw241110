@@ -27,7 +27,6 @@ namespace gaw241110.endgame.presenter
 
             _endGameView.Decided += OnDecide;
 
-            _endGameView.AcceptInput();
             _endGameView.Show();
         }
 
