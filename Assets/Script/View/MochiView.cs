@@ -19,7 +19,7 @@ namespace gaw241110.view
         [SerializeField] Image _imageGuage;
         float _time = 0f;
         bool _isCountTime = false;
-        const float c_FakeTime = 5f;
+        float _fillTime;
 
         public event Action Clicked;
 
@@ -40,12 +40,7 @@ namespace gaw241110.view
             if (_isCountTime && !_button.enabled)
             {
                 _time += Time.deltaTime;
-                _imageGuage.fillAmount = _time / c_FakeTime;
-                if (_time > c_FakeTime)
-                {
-                    _button.enabled = true;
-                    AcceptClick();
-                }
+                UpdateImageGauge();
             }
         }
 
@@ -78,10 +73,28 @@ namespace gaw241110.view
         public void AcceptClick()
         {
             _isCountTime = true;
-            if(_time > c_FakeTime)
+            if(_time > _fillTime)
             {
                 _button.enabled = true;
             }
+        }
+
+        public void SetFillTime(float time)
+        {
+            _fillTime = time;
+            UpdateImageGauge();
+            Log.DebugLog(_fillTime.ToString());
+        }
+
+        void UpdateImageGauge()
+        {
+            _imageGuage.fillAmount = _time / _fillTime;
+            if (_time > _fillTime)
+            {
+                _button.enabled = true;
+                AcceptClick();
+            }
+
         }
     }
 }

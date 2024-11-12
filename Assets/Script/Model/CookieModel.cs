@@ -18,7 +18,10 @@ namespace gaw241110.model
 
         public void AddStackedObj()
         {
-            _stackedObjModel.AddStackedObj("Cookie", _parameter);
+            for (int i = 0; i < _parameter.AddedCookieNumber; i++)
+            {
+                _stackedObjModel.AddStackedObj("Cookie", _parameter);
+            }
         }
     }
 }

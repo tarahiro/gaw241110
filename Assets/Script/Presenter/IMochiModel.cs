@@ -12,7 +12,7 @@ namespace gaw241110.presenter
 {
     public interface IMochiModel
     {
-        void StartModel(Action act);
+        void StartModel(Action act,Action<float> timeAct);
         void AddStackedObj();
     }
 }

@@ -16,9 +16,9 @@ namespace gaw241110.model
         [Inject] IMochiParameter _parameter;
         [Inject] IStackedObjModel _stackedObjModel;
 
-        public void StartModel(Action act)
+        public void StartModel(Action act, Action<float> timeAct)
         {
-            _parameter.MochiClickerAdded += act;
+            _parameter.StartModel(act, timeAct);
         }
 
         public void AddStackedObj()

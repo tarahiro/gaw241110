@@ -17,10 +17,10 @@ namespace gaw241110.presenter
 
         public void Initialize()
         {
-            _model.StartModel(AddMochiView);
+            _model.StartModel(OnAddMochiClicker, OnFillTimeChanged);
         }
 
-        public void AddMochiView()
+        public void OnAddMochiClicker()
         {
             _mochiMenuView.AddMochiClicker(OnClicked);
         }
@@ -28,6 +28,11 @@ namespace gaw241110.presenter
         void OnClicked()
         {
             _model.AddStackedObj();
+        }
+
+        void OnFillTimeChanged(float time)
+        {
+            _mochiMenuView.SetFillTime(time);
         }
     }
 }

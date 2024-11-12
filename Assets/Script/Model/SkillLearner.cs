@@ -55,6 +55,10 @@ namespace gaw241110.model
                     mochiParameter.MultiplyLength(master.SkillArg);
                     break;
 
+                case "MochiFillTimeChange":
+                    mochiParameter.MultiplyFillTime(master.SkillArg);
+                    break;
+
                 case "SeaSpeedDown":
                     Log.DebugLog("–¢ŽÀ‘•");
                     break;

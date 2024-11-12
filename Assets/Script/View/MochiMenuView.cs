@@ -34,14 +34,14 @@ namespace gaw241110.view
             var view = _viewList.First(x => !x.gameObject.activeSelf);
             view.gameObject.SetActive(true);
             view.Clicked += action;
+        }
 
-            /*
-            Transform t = Instantiate(Resources.Load<Transform>("MochiClicker"), transform);
-            t.localPosition = _initialMochiRoot.localPosition + Vector3.right * _xOffset * _viewList.Count;
-
-            _viewList.Add(t.GetComponent<IMochiView>());
-            _viewList[_viewList.Count - 1].Clicked += action;
-            */
+        public void SetFillTime(float time)
+        {
+            foreach(var view in _viewList)
+            {
+                view.SetFillTime(time);
+            }
         }
     }
 }

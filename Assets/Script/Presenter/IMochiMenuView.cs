@@ -13,5 +13,6 @@ namespace gaw241110.presenter
     public interface IMochiMenuView
     {
         void AddMochiClicker(Action action);
+        void SetFillTime(float time);
     }
 }

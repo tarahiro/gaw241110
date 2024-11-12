@@ -14,6 +14,7 @@ namespace gaw241110.model
     public interface IMochiParameter : IStackedObjParameter
     {
         void AddMochiClicker();
-        event Action MochiClickerAdded;
+        void MultiplyFillTime(float coeff);
+        void StartModel(Action act, Action<float> timeAct);
     }
 }
