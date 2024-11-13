@@ -64,6 +64,8 @@ namespace gaw241110.inject
             Container.BindInterfacesTo<StackedObjModel>().AsSingle();
             Container.BindInterfacesTo<CookiePresenter>().AsSingle();
 
+            Container.BindInterfacesTo<WarningFader>().FromComponentInHierarchy().AsSingle();
+            Container.BindInterfacesTo<SeaWarningView>().FromComponentInHierarchy().AsSingle();
             Container.BindInterfacesTo<SeaParameter>().AsSingle();
             Container.BindInterfacesTo<SeaModel>().AsSingle();
             Container.BindInterfacesTo<SeaView>().FromComponentInHierarchy().AsSingle();

@@ -18,6 +18,7 @@ namespace gaw241110.model
         [Inject] ICardManager cardManager;
         [Inject] MochiPresenter mochiPresenter;
         [Inject] CheckGamePresenter checkGamePresenter;
+        [Inject] ISeaWarningView seaWarningView;
 
         public void Tick()
         {
@@ -34,6 +35,15 @@ namespace gaw241110.model
             if (Input.GetKeyDown(KeyCode.T))
             {
                 checkGamePresenter.OnGameClear();
+            }
+
+            if (Input.GetKeyDown(KeyCode.Y))
+            {
+                seaWarningView.Show();
+            }
+            if (Input.GetKeyDown(KeyCode.U))
+            {
+                seaWarningView.End();
             }
         }
     }
