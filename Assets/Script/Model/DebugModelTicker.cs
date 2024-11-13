@@ -1,6 +1,7 @@
 using Cysharp.Threading.Tasks;
 using gaw241110;
 using gaw241110.presenter;
+using gaw241110.view;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -19,6 +20,7 @@ namespace gaw241110.model
         [Inject] MochiPresenter mochiPresenter;
         [Inject] CheckGamePresenter checkGamePresenter;
         [Inject] ISeaWarningView seaWarningView;
+        [Inject] SeaModel seaModel;
 
         public void Tick()
         {
@@ -44,6 +46,15 @@ namespace gaw241110.model
             if (Input.GetKeyDown(KeyCode.U))
             {
                 seaWarningView.End();
+            }
+
+            if (Input.GetKeyDown(KeyCode.H))
+            {
+                seaModel.WarningSeaState().Forget();
+            }
+            if (Input.GetKeyDown(KeyCode.J))
+            {
+                seaModel.SilentSeaState().Forget();
             }
         }
     }

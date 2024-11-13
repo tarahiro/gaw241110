@@ -1,3 +1,4 @@
+using Codice.Client.BaseCommands.Merge.Xml;
 using Cysharp.Threading.Tasks;
 using gaw241110;
 using System;
@@ -14,6 +15,6 @@ namespace gaw241110.presenter
         float GetSeaAltitude { get; }
         IObservable<float> SeaRisen { get; }
         void AddSea(float deltaTime);
-        void StartModel(Action<float> risen, Action levelUpped);
+        void StartModel(Action<float> risen, Action levelUpped,Action onWarning, Action onSilent);
     }
 }

@@ -30,12 +30,16 @@ namespace gaw241110.view
 
         public float GetSeaAltitude => _seaAltitude;
         public IObservable<float> SeaRisen => _seaRisen;
+        event Action _changedToWarning;
+        event Action _changedToSilent;
 
 
-        public void StartModel(Action<float> risen, Action seaLevelUpped)
+        public void StartModel(Action<float> risen, Action seaLevelUpped, Action onWarning, Action onSilent)
         {
             _seaRisen.Subscribe(risen);
             _parameter.SeaLevelUpped += seaLevelUpped;
+            _changedToWarning = onWarning;
+            _changedToSilent = onSilent;
         }
 
         public void AddSea(float deltaTime)
@@ -54,18 +58,20 @@ namespace gaw241110.view
             }
         }
 
-        async UniTask WarningSeaState()
+        public async UniTask WarningSeaState()
         {
             float time = 0f;
             _seaState = SeaState.Warning;
+            _changedToWarning.Invoke();
             await UniTask.WaitUntil(() => (time = PausableCounter(isPaused, time)) > _parameter.GetWarningSeaTime);
             SilentSeaState().Forget();
 
         }
-        async UniTask SilentSeaState()
+        public async UniTask SilentSeaState()
         {
             float time = 0f;
             _seaState = SeaState.Silent;
+            _changedToSilent.Invoke();
             await UniTask.WaitUntil(() => (time = PausableCounter(isPaused, time)) > _parameter.GetSilentSeaTime);
             _seaState = SeaState.Normal;
 

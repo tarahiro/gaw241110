@@ -16,10 +16,11 @@ namespace gaw241110.presenter
         [Inject] ISeaView _view;
         [Inject] IAltitudeUiView _alitudeView;
         [Inject] ISeaLevelUpView _levelUpView;
+        [Inject] ISeaWarningView _warningView;
 
         public void Initialize()
         {
-            _model.StartModel(OnRiseSea, OnSeaLevelUp);
+            _model.StartModel(OnRiseSea, OnSeaLevelUp,OnWarning,OnSilent);
         }
         public void StopSea()
         {
@@ -35,6 +36,16 @@ namespace gaw241110.presenter
         void OnSeaLevelUp()
         {
             _levelUpView.Show();
+        }
+
+        void OnWarning()
+        {
+            _warningView.Show();
+        }
+
+        void OnSilent()
+        {
+            _warningView.End();
         }
 
     }

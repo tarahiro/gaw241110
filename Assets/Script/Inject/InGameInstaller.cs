@@ -67,7 +67,7 @@ namespace gaw241110.inject
             Container.BindInterfacesTo<WarningFader>().FromComponentInHierarchy().AsSingle();
             Container.BindInterfacesTo<SeaWarningView>().FromComponentInHierarchy().AsSingle();
             Container.BindInterfacesTo<SeaParameter>().AsSingle();
-            Container.BindInterfacesTo<SeaModel>().AsSingle();
+            Container.BindInterfacesAndSelfTo<SeaModel>().AsSingle();
             Container.BindInterfacesTo<SeaView>().FromComponentInHierarchy().AsSingle();
             Container.BindInterfacesTo<SeaLevelUpView>().FromComponentInHierarchy().AsSingle();
             Container.BindInterfacesTo<SeaPresenter>().AsSingle();
