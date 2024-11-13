@@ -88,11 +88,13 @@
   </Style>
  </Styles>
  <Worksheet ss:Name="Script">
-  <Table ss:ExpandedColumnCount="9" ss:ExpandedRowCount="36" x:FullColumns="1"
+  <Table ss:ExpandedColumnCount="9" ss:ExpandedRowCount="41" x:FullColumns="1"
    x:FullRows="1" ss:DefaultColumnWidth="52.5" ss:DefaultRowHeight="18">
    <Column ss:AutoFitWidth="0" ss:Width="30"/>
    <Column ss:AutoFitWidth="0" ss:Width="146.5"/>
-   <Column ss:AutoFitWidth="0" ss:Width="90" ss:Span="6"/>
+   <Column ss:AutoFitWidth="0" ss:Width="90" ss:Span="1"/>
+   <Column ss:Index="5" ss:AutoFitWidth="0" ss:Width="158"/>
+   <Column ss:AutoFitWidth="0" ss:Width="90" ss:Span="3"/>
    <Row ss:AutoFitHeight="0" ss:Height="24.5" ss:StyleID="s62">
     <Cell ss:StyleID="s63" ss:ArrayRange="RC"
      ss:Formula="=MID( CELL(&quot;filename&quot;,R1C1),&#10;FIND(&quot;[&quot;, CELL(&quot;filename&quot;,R1C1)) +1,&#10;FIND(&quot;]&quot;, CELL(&quot;filename&quot;,R1C1)) - FIND(&quot;[&quot;, CELL(&quot;filename&quot;,R1C1)) -1)"><Data
@@ -112,11 +114,13 @@
    <Row ss:AutoFitHeight="0">
     <Cell ss:StyleID="s67" ss:Formula="=ROW()-5"><Data ss:Type="Number">0</Data></Cell>
     <Cell ss:StyleID="s67"><Data ss:Type="String">CookieHeightUp1</Data></Cell>
-    <Cell ss:StyleID="s67" ss:ArrayRange="RC"
-     ss:Formula="=CONCAT(&quot;クッキー高さ&quot;+TEXT(RC[5],tr)+&quot;倍&quot;)"><Data
-      ss:Type="Error">#VALUE!</Data></Cell>
-    <Cell ss:StyleID="s67"/>
-    <Cell ss:StyleID="s67"><Data ss:Type="String">Fake</Data></Cell>
+    <Cell ss:StyleID="s67"><PhoneticText
+      xmlns="urn:schemas-microsoft-com:office:excel">タカ</PhoneticText><Data
+      ss:Type="String">クッキー高さ+</Data></Cell>
+    <Cell ss:StyleID="s67" ss:Formula="=CONCAT(&quot;クッキーの高さが、&quot;,RC[4],&quot;倍になる。&quot;)"><Data
+      ss:Type="String">クッキーの高さが、1.1倍になる。</Data></Cell>
+    <Cell ss:StyleID="s67" ss:Formula="=CONCAT(&quot;Sprite/Card/&quot;,RC[1])"><Data
+      ss:Type="String">Sprite/Card/CookieHeightUp</Data></Cell>
     <Cell ss:StyleID="s67"><Data ss:Type="String">CookieHeightUp</Data></Cell>
     <Cell ss:StyleID="s67"><Data ss:Type="Number">1</Data></Cell>
     <Cell ss:StyleID="s67"><Data ss:Type="Number">1.1000000000000001</Data></Cell>
@@ -126,10 +130,12 @@
     <Cell ss:StyleID="s67" ss:Formula="=ROW()-5"><Data ss:Type="Number">1</Data></Cell>
     <Cell ss:StyleID="s67"><Data ss:Type="String">CookieHeightUp2</Data></Cell>
     <Cell ss:StyleID="s67"><PhoneticText
-      xmlns="urn:schemas-microsoft-com:office:excel">タカバイ</PhoneticText><Data
-      ss:Type="String">クッキー高さ1.2倍</Data></Cell>
-    <Cell ss:StyleID="s67"/>
-    <Cell ss:StyleID="s67"><Data ss:Type="String">Fake</Data></Cell>
+      xmlns="urn:schemas-microsoft-com:office:excel">タカ</PhoneticText><Data
+      ss:Type="String">クッキー高さ+</Data></Cell>
+    <Cell ss:StyleID="s67" ss:Formula="=CONCAT(&quot;クッキーの高さが、&quot;,RC[4],&quot;倍になる。&quot;)"><Data
+      ss:Type="String">クッキーの高さが、1.2倍になる。</Data></Cell>
+    <Cell ss:StyleID="s67" ss:Formula="=CONCAT(&quot;Sprite/Card/&quot;,RC[1])"><Data
+      ss:Type="String">Sprite/Card/CookieHeightUp</Data></Cell>
     <Cell ss:StyleID="s67"><Data ss:Type="String">CookieHeightUp</Data></Cell>
     <Cell ss:StyleID="s67"><Data ss:Type="Number">2</Data></Cell>
     <Cell ss:StyleID="s67"><Data ss:Type="Number">1.2</Data></Cell>
@@ -139,10 +145,12 @@
     <Cell ss:StyleID="s67" ss:Formula="=ROW()-5"><Data ss:Type="Number">2</Data></Cell>
     <Cell ss:StyleID="s67"><Data ss:Type="String">CookieHeightUp3</Data></Cell>
     <Cell ss:StyleID="s67"><PhoneticText
-      xmlns="urn:schemas-microsoft-com:office:excel">タカバイ</PhoneticText><Data
-      ss:Type="String">クッキー高さ1.3倍</Data></Cell>
-    <Cell ss:StyleID="s67"/>
-    <Cell ss:StyleID="s67"><Data ss:Type="String">Fake</Data></Cell>
+      xmlns="urn:schemas-microsoft-com:office:excel">タカ</PhoneticText><Data
+      ss:Type="String">クッキー高さ+</Data></Cell>
+    <Cell ss:StyleID="s67" ss:Formula="=CONCAT(&quot;クッキーの高さが、&quot;,RC[4],&quot;倍になる。&quot;)"><Data
+      ss:Type="String">クッキーの高さが、1.3倍になる。</Data></Cell>
+    <Cell ss:StyleID="s67" ss:Formula="=CONCAT(&quot;Sprite/Card/&quot;,RC[1])"><Data
+      ss:Type="String">Sprite/Card/CookieHeightUp</Data></Cell>
     <Cell ss:StyleID="s67"><Data ss:Type="String">CookieHeightUp</Data></Cell>
     <Cell ss:StyleID="s67"><Data ss:Type="Number">3</Data></Cell>
     <Cell ss:StyleID="s67"><Data ss:Type="Number">1.3</Data></Cell>
@@ -152,10 +160,12 @@
     <Cell ss:StyleID="s67" ss:Formula="=ROW()-5"><Data ss:Type="Number">3</Data></Cell>
     <Cell ss:StyleID="s67"><Data ss:Type="String">CookieHeightUp4</Data></Cell>
     <Cell ss:StyleID="s67"><PhoneticText
-      xmlns="urn:schemas-microsoft-com:office:excel">タカバイ</PhoneticText><Data
-      ss:Type="String">クッキー高さ1.4倍</Data></Cell>
-    <Cell ss:StyleID="s67"/>
-    <Cell ss:StyleID="s67"><Data ss:Type="String">Fake</Data></Cell>
+      xmlns="urn:schemas-microsoft-com:office:excel">タカ</PhoneticText><Data
+      ss:Type="String">クッキー高さ+</Data></Cell>
+    <Cell ss:StyleID="s67" ss:Formula="=CONCAT(&quot;クッキーの高さが、&quot;,RC[4],&quot;倍になる。&quot;)"><Data
+      ss:Type="String">クッキーの高さが、1.4倍になる。</Data></Cell>
+    <Cell ss:StyleID="s67" ss:Formula="=CONCAT(&quot;Sprite/Card/&quot;,RC[1])"><Data
+      ss:Type="String">Sprite/Card/CookieHeightUp</Data></Cell>
     <Cell ss:StyleID="s67"><Data ss:Type="String">CookieHeightUp</Data></Cell>
     <Cell ss:StyleID="s67"><Data ss:Type="Number">4</Data></Cell>
     <Cell ss:StyleID="s67"><Data ss:Type="Number">1.4</Data></Cell>
@@ -165,10 +175,12 @@
     <Cell ss:StyleID="s67" ss:Formula="=ROW()-5"><Data ss:Type="Number">4</Data></Cell>
     <Cell ss:StyleID="s67"><Data ss:Type="String">CookieHeightUp5</Data></Cell>
     <Cell ss:StyleID="s67"><PhoneticText
-      xmlns="urn:schemas-microsoft-com:office:excel">タカバイ</PhoneticText><Data
-      ss:Type="String">クッキー高さ1.5倍</Data></Cell>
-    <Cell ss:StyleID="s67"/>
-    <Cell ss:StyleID="s67"><Data ss:Type="String">Fake</Data></Cell>
+      xmlns="urn:schemas-microsoft-com:office:excel">タカ</PhoneticText><Data
+      ss:Type="String">クッキー高さ+</Data></Cell>
+    <Cell ss:StyleID="s67" ss:Formula="=CONCAT(&quot;クッキーの高さが、&quot;,RC[4],&quot;倍になる。&quot;)"><Data
+      ss:Type="String">クッキーの高さが、1.5倍になる。</Data></Cell>
+    <Cell ss:StyleID="s67" ss:Formula="=CONCAT(&quot;Sprite/Card/&quot;,RC[1])"><Data
+      ss:Type="String">Sprite/Card/CookieHeightUp</Data></Cell>
     <Cell ss:StyleID="s67"><Data ss:Type="String">CookieHeightUp</Data></Cell>
     <Cell ss:StyleID="s67"><Data ss:Type="Number">5</Data></Cell>
     <Cell ss:StyleID="s67"><Data ss:Type="Number">1.5</Data></Cell>
@@ -178,10 +190,12 @@
     <Cell ss:StyleID="s67" ss:Formula="=ROW()-5"><Data ss:Type="Number">5</Data></Cell>
     <Cell ss:StyleID="s67"><Data ss:Type="String">CookieNumberUp1</Data></Cell>
     <Cell ss:StyleID="s67"><PhoneticText
-      xmlns="urn:schemas-microsoft-com:office:excel">カズバイ</PhoneticText><Data
-      ss:Type="String">クッキー数2倍</Data></Cell>
-    <Cell ss:StyleID="s67"/>
-    <Cell ss:StyleID="s67"><Data ss:Type="String">Fake</Data></Cell>
+      xmlns="urn:schemas-microsoft-com:office:excel">バイ</PhoneticText><Data
+      ss:Type="String">クッキー2倍！</Data></Cell>
+    <Cell ss:StyleID="s67"><PhoneticText
+      xmlns="urn:schemas-microsoft-com:office:excel">コツ</PhoneticText><Data
+      ss:Type="String">1クリックで、2個のクッキーが積まれるようになる。</Data></Cell>
+    <Cell ss:StyleID="s67"><Data ss:Type="String">Sprite/Card/CookieNumberUp2</Data></Cell>
     <Cell ss:StyleID="s67"><Data ss:Type="String">CookieNumberUp</Data></Cell>
     <Cell ss:StyleID="s67"><Data ss:Type="Number">1</Data></Cell>
     <Cell ss:StyleID="s67"><Data ss:Type="Number">2</Data></Cell>
@@ -191,10 +205,12 @@
     <Cell ss:StyleID="s67" ss:Formula="=ROW()-5"><Data ss:Type="Number">6</Data></Cell>
     <Cell ss:StyleID="s67"><Data ss:Type="String">CookieNumberUp2</Data></Cell>
     <Cell ss:StyleID="s67"><PhoneticText
-      xmlns="urn:schemas-microsoft-com:office:excel">スウバイ</PhoneticText><Data
-      ss:Type="String">クッキー数3倍</Data></Cell>
-    <Cell ss:StyleID="s67"/>
-    <Cell ss:StyleID="s67"><Data ss:Type="String">Fake</Data></Cell>
+      xmlns="urn:schemas-microsoft-com:office:excel">バイ</PhoneticText><Data
+      ss:Type="String">クッキー3倍！</Data></Cell>
+    <Cell ss:StyleID="s67"><PhoneticText
+      xmlns="urn:schemas-microsoft-com:office:excel">コツ</PhoneticText><Data
+      ss:Type="String">1クリックで、3個のクッキーが積まれるようになる。</Data></Cell>
+    <Cell ss:StyleID="s67"><Data ss:Type="String">Sprite/Card/CookieNumberUp3</Data></Cell>
     <Cell ss:StyleID="s67"><Data ss:Type="String">CookieNumberUp</Data></Cell>
     <Cell ss:StyleID="s67"><Data ss:Type="Number">2</Data></Cell>
     <Cell ss:StyleID="s67"><Data ss:Type="Number">3</Data></Cell>
@@ -206,8 +222,11 @@
     <Cell ss:StyleID="s67"><PhoneticText
       xmlns="urn:schemas-microsoft-com:office:excel">ツイカ</PhoneticText><Data
       ss:Type="String">モチ追加</Data></Cell>
-    <Cell ss:StyleID="s67"/>
-    <Cell ss:StyleID="s67"><Data ss:Type="String">Fake</Data></Cell>
+    <Cell ss:StyleID="s67"><PhoneticText
+      xmlns="urn:schemas-microsoft-com:office:excel">オオヤ</PhoneticText><Data
+      ss:Type="String">大きいおモチが焼けるようになる。</Data></Cell>
+    <Cell ss:StyleID="s67" ss:Formula="=CONCAT(&quot;Sprite/Card/&quot;,RC[1])"><Data
+      ss:Type="String">Sprite/Card/MochiClickerAdd</Data></Cell>
     <Cell ss:StyleID="s67"><Data ss:Type="String">MochiClickerAdd</Data></Cell>
     <Cell ss:StyleID="s67"><Data ss:Type="Number">2</Data></Cell>
     <Cell ss:StyleID="s67"><Data ss:Type="Number">3</Data></Cell>
@@ -219,8 +238,11 @@
     <Cell ss:StyleID="s67"><PhoneticText
       xmlns="urn:schemas-microsoft-com:office:excel">ツイカ</PhoneticText><Data
       ss:Type="String">モチ追加</Data></Cell>
-    <Cell ss:StyleID="s67"/>
-    <Cell ss:StyleID="s67"><Data ss:Type="String">Fake</Data></Cell>
+    <Cell ss:StyleID="s67"><PhoneticText
+      xmlns="urn:schemas-microsoft-com:office:excel">オオコヤ</PhoneticText><Data
+      ss:Type="String">大きいおモチが、2個焼けるようになる。</Data></Cell>
+    <Cell ss:StyleID="s67" ss:Formula="=CONCAT(&quot;Sprite/Card/&quot;,RC[1])"><Data
+      ss:Type="String">Sprite/Card/MochiClickerAdd</Data></Cell>
     <Cell ss:StyleID="s67"><Data ss:Type="String">MochiClickerAdd</Data></Cell>
     <Cell ss:StyleID="s67"><Data ss:Type="Number">2</Data></Cell>
     <Cell ss:StyleID="s67"><Data ss:Type="Number">3</Data></Cell>
@@ -232,8 +254,11 @@
     <Cell ss:StyleID="s67"><PhoneticText
       xmlns="urn:schemas-microsoft-com:office:excel">ツイカ</PhoneticText><Data
       ss:Type="String">モチ追加</Data></Cell>
-    <Cell ss:StyleID="s67"/>
-    <Cell ss:StyleID="s67"><Data ss:Type="String">Fake</Data></Cell>
+    <Cell ss:StyleID="s67"><PhoneticText
+      xmlns="urn:schemas-microsoft-com:office:excel">オオコヤ</PhoneticText><Data
+      ss:Type="String">大きいおモチが、3個焼けるようになる。</Data></Cell>
+    <Cell ss:StyleID="s67" ss:Formula="=CONCAT(&quot;Sprite/Card/&quot;,RC[1])"><Data
+      ss:Type="String">Sprite/Card/MochiClickerAdd</Data></Cell>
     <Cell ss:StyleID="s67"><Data ss:Type="String">MochiClickerAdd</Data></Cell>
     <Cell ss:StyleID="s67"><Data ss:Type="Number">2</Data></Cell>
     <Cell ss:StyleID="s67"><Data ss:Type="Number">3</Data></Cell>
@@ -245,8 +270,11 @@
     <Cell ss:StyleID="s67"><PhoneticText
       xmlns="urn:schemas-microsoft-com:office:excel">ツイカ</PhoneticText><Data
       ss:Type="String">モチ追加</Data></Cell>
-    <Cell ss:StyleID="s67"/>
-    <Cell ss:StyleID="s67"><Data ss:Type="String">Fake</Data></Cell>
+    <Cell ss:StyleID="s67"><PhoneticText
+      xmlns="urn:schemas-microsoft-com:office:excel">オオコヤ</PhoneticText><Data
+      ss:Type="String">大きいおモチが、4個焼けるようになる。</Data></Cell>
+    <Cell ss:StyleID="s67" ss:Formula="=CONCAT(&quot;Sprite/Card/&quot;,RC[1])"><Data
+      ss:Type="String">Sprite/Card/MochiClickerAdd</Data></Cell>
     <Cell ss:StyleID="s67"><Data ss:Type="String">MochiClickerAdd</Data></Cell>
     <Cell ss:StyleID="s67"><Data ss:Type="Number">2</Data></Cell>
     <Cell ss:StyleID="s67"><Data ss:Type="Number">3</Data></Cell>
@@ -258,8 +286,11 @@
     <Cell ss:StyleID="s67"><PhoneticText
       xmlns="urn:schemas-microsoft-com:office:excel">ツイカ</PhoneticText><Data
       ss:Type="String">モチ追加</Data></Cell>
-    <Cell ss:StyleID="s67"/>
-    <Cell ss:StyleID="s67"><Data ss:Type="String">Fake</Data></Cell>
+    <Cell ss:StyleID="s67"><PhoneticText
+      xmlns="urn:schemas-microsoft-com:office:excel">オオコヤ</PhoneticText><Data
+      ss:Type="String">大きいおモチが、5個焼けるようになる。</Data></Cell>
+    <Cell ss:StyleID="s67" ss:Formula="=CONCAT(&quot;Sprite/Card/&quot;,RC[1])"><Data
+      ss:Type="String">Sprite/Card/MochiClickerAdd</Data></Cell>
     <Cell ss:StyleID="s67"><Data ss:Type="String">MochiClickerAdd</Data></Cell>
     <Cell ss:StyleID="s67"><Data ss:Type="Number">2</Data></Cell>
     <Cell ss:StyleID="s67"><Data ss:Type="Number">3</Data></Cell>
@@ -269,10 +300,12 @@
     <Cell ss:StyleID="s67" ss:Formula="=ROW()-5"><Data ss:Type="Number">12</Data></Cell>
     <Cell ss:StyleID="s67"><Data ss:Type="String">MochiHeightUp1</Data></Cell>
     <Cell ss:StyleID="s67"><PhoneticText
-      xmlns="urn:schemas-microsoft-com:office:excel">タカバイ</PhoneticText><Data
-      ss:Type="String">モチ高さ1.1倍</Data></Cell>
-    <Cell ss:StyleID="s67"/>
-    <Cell ss:StyleID="s67"><Data ss:Type="String">Fake</Data></Cell>
+      xmlns="urn:schemas-microsoft-com:office:excel">タカ</PhoneticText><Data
+      ss:Type="String">モチ高さ+</Data></Cell>
+    <Cell ss:StyleID="s67" ss:Formula="=CONCAT(&quot;おモチの高さが、&quot;,RC[4],&quot;倍になる。&quot;)"><Data
+      ss:Type="String">おモチの高さが、1.1倍になる。</Data></Cell>
+    <Cell ss:StyleID="s67" ss:Formula="=CONCAT(&quot;Sprite/Card/&quot;,RC[1])"><Data
+      ss:Type="String">Sprite/Card/MochiHeightUp</Data></Cell>
     <Cell ss:StyleID="s67"><Data ss:Type="String">MochiHeightUp</Data></Cell>
     <Cell ss:StyleID="s67"><Data ss:Type="Number">1</Data></Cell>
     <Cell ss:StyleID="s67"><Data ss:Type="Number">1.1000000000000001</Data></Cell>
@@ -282,10 +315,12 @@
     <Cell ss:StyleID="s67" ss:Formula="=ROW()-5"><Data ss:Type="Number">13</Data></Cell>
     <Cell ss:StyleID="s67"><Data ss:Type="String">MochiHeightUp2</Data></Cell>
     <Cell ss:StyleID="s67"><PhoneticText
-      xmlns="urn:schemas-microsoft-com:office:excel">タカバイ</PhoneticText><Data
-      ss:Type="String">モチ高さ1.2倍</Data></Cell>
-    <Cell ss:StyleID="s67"/>
-    <Cell ss:StyleID="s67"><Data ss:Type="String">Fake</Data></Cell>
+      xmlns="urn:schemas-microsoft-com:office:excel">タカ</PhoneticText><Data
+      ss:Type="String">モチ高さ+</Data></Cell>
+    <Cell ss:StyleID="s67" ss:Formula="=CONCAT(&quot;おモチの高さが、&quot;,RC[4],&quot;倍になる。&quot;)"><Data
+      ss:Type="String">おモチの高さが、1.2倍になる。</Data></Cell>
+    <Cell ss:StyleID="s67" ss:Formula="=CONCAT(&quot;Sprite/Card/&quot;,RC[1])"><Data
+      ss:Type="String">Sprite/Card/MochiHeightUp</Data></Cell>
     <Cell ss:StyleID="s67"><Data ss:Type="String">MochiHeightUp</Data></Cell>
     <Cell ss:StyleID="s67"><Data ss:Type="Number">2</Data></Cell>
     <Cell ss:StyleID="s67"><Data ss:Type="Number">1.2</Data></Cell>
@@ -295,10 +330,12 @@
     <Cell ss:StyleID="s67" ss:Formula="=ROW()-5"><Data ss:Type="Number">14</Data></Cell>
     <Cell ss:StyleID="s67"><Data ss:Type="String">MochiHeightUp3</Data></Cell>
     <Cell ss:StyleID="s67"><PhoneticText
-      xmlns="urn:schemas-microsoft-com:office:excel">タカバイ</PhoneticText><Data
-      ss:Type="String">モチ高さ1.3倍</Data></Cell>
-    <Cell ss:StyleID="s67"/>
-    <Cell ss:StyleID="s67"><Data ss:Type="String">Fake</Data></Cell>
+      xmlns="urn:schemas-microsoft-com:office:excel">タカ</PhoneticText><Data
+      ss:Type="String">モチ高さ+</Data></Cell>
+    <Cell ss:StyleID="s67" ss:Formula="=CONCAT(&quot;おモチの高さが、&quot;,RC[4],&quot;倍になる。&quot;)"><Data
+      ss:Type="String">おモチの高さが、1.3倍になる。</Data></Cell>
+    <Cell ss:StyleID="s67" ss:Formula="=CONCAT(&quot;Sprite/Card/&quot;,RC[1])"><Data
+      ss:Type="String">Sprite/Card/MochiHeightUp</Data></Cell>
     <Cell ss:StyleID="s67"><Data ss:Type="String">MochiHeightUp</Data></Cell>
     <Cell ss:StyleID="s67"><Data ss:Type="Number">3</Data></Cell>
     <Cell ss:StyleID="s67"><Data ss:Type="Number">1.3</Data></Cell>
@@ -308,10 +345,12 @@
     <Cell ss:StyleID="s67" ss:Formula="=ROW()-5"><Data ss:Type="Number">15</Data></Cell>
     <Cell ss:StyleID="s67"><Data ss:Type="String">MochiHeightUp4</Data></Cell>
     <Cell ss:StyleID="s67"><PhoneticText
-      xmlns="urn:schemas-microsoft-com:office:excel">タカバイ</PhoneticText><Data
-      ss:Type="String">モチ高さ1.4倍</Data></Cell>
-    <Cell ss:StyleID="s67"/>
-    <Cell ss:StyleID="s67"><Data ss:Type="String">Fake</Data></Cell>
+      xmlns="urn:schemas-microsoft-com:office:excel">タカ</PhoneticText><Data
+      ss:Type="String">モチ高さ+</Data></Cell>
+    <Cell ss:StyleID="s67" ss:Formula="=CONCAT(&quot;おモチの高さが、&quot;,RC[4],&quot;倍になる。&quot;)"><Data
+      ss:Type="String">おモチの高さが、1.4倍になる。</Data></Cell>
+    <Cell ss:StyleID="s67" ss:Formula="=CONCAT(&quot;Sprite/Card/&quot;,RC[1])"><Data
+      ss:Type="String">Sprite/Card/MochiHeightUp</Data></Cell>
     <Cell ss:StyleID="s67"><Data ss:Type="String">MochiHeightUp</Data></Cell>
     <Cell ss:StyleID="s67"><Data ss:Type="Number">4</Data></Cell>
     <Cell ss:StyleID="s67"><Data ss:Type="Number">1.4</Data></Cell>
@@ -321,10 +360,12 @@
     <Cell ss:StyleID="s67" ss:Formula="=ROW()-5"><Data ss:Type="Number">16</Data></Cell>
     <Cell ss:StyleID="s67"><Data ss:Type="String">MochiHeightUp5</Data></Cell>
     <Cell ss:StyleID="s67"><PhoneticText
-      xmlns="urn:schemas-microsoft-com:office:excel">タカバイ</PhoneticText><Data
-      ss:Type="String">モチ高さ1.5倍</Data></Cell>
-    <Cell ss:StyleID="s67"/>
-    <Cell ss:StyleID="s67"><Data ss:Type="String">Fake</Data></Cell>
+      xmlns="urn:schemas-microsoft-com:office:excel">タカ</PhoneticText><Data
+      ss:Type="String">モチ高さ+</Data></Cell>
+    <Cell ss:StyleID="s67" ss:Formula="=CONCAT(&quot;おモチの高さが、&quot;,RC[4],&quot;倍になる。&quot;)"><Data
+      ss:Type="String">おモチの高さが、1.5倍になる。</Data></Cell>
+    <Cell ss:StyleID="s67" ss:Formula="=CONCAT(&quot;Sprite/Card/&quot;,RC[1])"><Data
+      ss:Type="String">Sprite/Card/MochiHeightUp</Data></Cell>
     <Cell ss:StyleID="s67"><Data ss:Type="String">MochiHeightUp</Data></Cell>
     <Cell ss:StyleID="s67"><Data ss:Type="Number">5</Data></Cell>
     <Cell ss:StyleID="s67"><Data ss:Type="Number">1.5</Data></Cell>
@@ -334,10 +375,12 @@
     <Cell ss:StyleID="s67" ss:Formula="=ROW()-5"><Data ss:Type="Number">17</Data></Cell>
     <Cell ss:StyleID="s67"><Data ss:Type="String">MochiFillTimeChanged1</Data></Cell>
     <Cell ss:StyleID="s67"><PhoneticText
-      xmlns="urn:schemas-microsoft-com:office:excel">ヤソクドバイ</PhoneticText><Data
-      ss:Type="String">モチ焼け速度0.9倍</Data></Cell>
-    <Cell ss:StyleID="s67"/>
-    <Cell ss:StyleID="s67"><Data ss:Type="String">Fake</Data></Cell>
+      xmlns="urn:schemas-microsoft-com:office:excel">ヤソクド</PhoneticText><Data
+      ss:Type="String">モチ焼け速度+</Data></Cell>
+    <Cell ss:StyleID="s67" ss:Formula="=CONCAT(&quot;おモチの焼ける時間が、&quot;,RC[4],&quot;倍になる。&quot;)"><Data
+      ss:Type="String">おモチの焼ける時間が、0.9倍になる。</Data></Cell>
+    <Cell ss:StyleID="s67" ss:Formula="=CONCAT(&quot;Sprite/Card/&quot;,RC[1])"><Data
+      ss:Type="String">Sprite/Card/MochiFillTimeChange</Data></Cell>
     <Cell ss:StyleID="s67"><Data ss:Type="String">MochiFillTimeChange</Data></Cell>
     <Cell ss:StyleID="s67"><Data ss:Type="Number">1</Data></Cell>
     <Cell ss:StyleID="s67"><Data ss:Type="Number">0.9</Data></Cell>
@@ -347,10 +390,12 @@
     <Cell ss:StyleID="s67" ss:Formula="=ROW()-5"><Data ss:Type="Number">18</Data></Cell>
     <Cell ss:StyleID="s67"><Data ss:Type="String">MochiFillTimeChanged2</Data></Cell>
     <Cell ss:StyleID="s67"><PhoneticText
-      xmlns="urn:schemas-microsoft-com:office:excel">ヤソクドバイ</PhoneticText><Data
-      ss:Type="String">モチ焼け速度0.8倍</Data></Cell>
-    <Cell ss:StyleID="s67"/>
-    <Cell ss:StyleID="s67"><Data ss:Type="String">Fake</Data></Cell>
+      xmlns="urn:schemas-microsoft-com:office:excel">ヤソクド</PhoneticText><Data
+      ss:Type="String">モチ焼け速度+</Data></Cell>
+    <Cell ss:StyleID="s67" ss:Formula="=CONCAT(&quot;おモチの焼ける時間が、&quot;,RC[4],&quot;倍になる。&quot;)"><Data
+      ss:Type="String">おモチの焼ける時間が、0.8倍になる。</Data></Cell>
+    <Cell ss:StyleID="s67" ss:Formula="=CONCAT(&quot;Sprite/Card/&quot;,RC[1])"><Data
+      ss:Type="String">Sprite/Card/MochiFillTimeChange</Data></Cell>
     <Cell ss:StyleID="s67"><Data ss:Type="String">MochiFillTimeChange</Data></Cell>
     <Cell ss:StyleID="s67"><Data ss:Type="Number">2</Data></Cell>
     <Cell ss:StyleID="s67"><Data ss:Type="Number">0.8</Data></Cell>
@@ -360,10 +405,12 @@
     <Cell ss:StyleID="s67" ss:Formula="=ROW()-5"><Data ss:Type="Number">19</Data></Cell>
     <Cell ss:StyleID="s67"><Data ss:Type="String">MochiFillTimeChanged3</Data></Cell>
     <Cell ss:StyleID="s67"><PhoneticText
-      xmlns="urn:schemas-microsoft-com:office:excel">ヤソクドバイ</PhoneticText><Data
-      ss:Type="String">モチ焼け速度0.7倍</Data></Cell>
-    <Cell ss:StyleID="s67"/>
-    <Cell ss:StyleID="s67"><Data ss:Type="String">Fake</Data></Cell>
+      xmlns="urn:schemas-microsoft-com:office:excel">ヤソクド</PhoneticText><Data
+      ss:Type="String">モチ焼け速度+</Data></Cell>
+    <Cell ss:StyleID="s67" ss:Formula="=CONCAT(&quot;おモチの焼ける時間が、&quot;,RC[4],&quot;倍になる。&quot;)"><Data
+      ss:Type="String">おモチの焼ける時間が、0.7倍になる。</Data></Cell>
+    <Cell ss:StyleID="s67" ss:Formula="=CONCAT(&quot;Sprite/Card/&quot;,RC[1])"><Data
+      ss:Type="String">Sprite/Card/MochiFillTimeChange</Data></Cell>
     <Cell ss:StyleID="s67"><Data ss:Type="String">MochiFillTimeChange</Data></Cell>
     <Cell ss:StyleID="s67"><Data ss:Type="Number">3</Data></Cell>
     <Cell ss:StyleID="s67"><Data ss:Type="Number">0.7</Data></Cell>
@@ -373,10 +420,12 @@
     <Cell ss:StyleID="s67" ss:Formula="=ROW()-5"><Data ss:Type="Number">20</Data></Cell>
     <Cell ss:StyleID="s67"><Data ss:Type="String">MochiFillTimeChanged4</Data></Cell>
     <Cell ss:StyleID="s67"><PhoneticText
-      xmlns="urn:schemas-microsoft-com:office:excel">ヤソクドバイ</PhoneticText><Data
-      ss:Type="String">モチ焼け速度0.6倍</Data></Cell>
-    <Cell ss:StyleID="s67"/>
-    <Cell ss:StyleID="s67"><Data ss:Type="String">Fake</Data></Cell>
+      xmlns="urn:schemas-microsoft-com:office:excel">ヤソクド</PhoneticText><Data
+      ss:Type="String">モチ焼け速度+</Data></Cell>
+    <Cell ss:StyleID="s67" ss:Formula="=CONCAT(&quot;おモチの焼ける時間が、&quot;,RC[4],&quot;倍になる。&quot;)"><Data
+      ss:Type="String">おモチの焼ける時間が、0.6倍になる。</Data></Cell>
+    <Cell ss:StyleID="s67" ss:Formula="=CONCAT(&quot;Sprite/Card/&quot;,RC[1])"><Data
+      ss:Type="String">Sprite/Card/MochiFillTimeChange</Data></Cell>
     <Cell ss:StyleID="s67"><Data ss:Type="String">MochiFillTimeChange</Data></Cell>
     <Cell ss:StyleID="s67"><Data ss:Type="Number">4</Data></Cell>
     <Cell ss:StyleID="s67"><Data ss:Type="Number">0.6</Data></Cell>
@@ -386,10 +435,12 @@
     <Cell ss:StyleID="s67" ss:Formula="=ROW()-5"><Data ss:Type="Number">21</Data></Cell>
     <Cell ss:StyleID="s67"><Data ss:Type="String">MochiFillTimeChanged5</Data></Cell>
     <Cell ss:StyleID="s67"><PhoneticText
-      xmlns="urn:schemas-microsoft-com:office:excel">ヤソクドバイ</PhoneticText><Data
-      ss:Type="String">モチ焼け速度0.5倍</Data></Cell>
-    <Cell ss:StyleID="s67"/>
-    <Cell ss:StyleID="s67"><Data ss:Type="String">Fake</Data></Cell>
+      xmlns="urn:schemas-microsoft-com:office:excel">ヤソクド</PhoneticText><Data
+      ss:Type="String">モチ焼け速度+</Data></Cell>
+    <Cell ss:StyleID="s67" ss:Formula="=CONCAT(&quot;おモチの焼ける時間が、&quot;,RC[4],&quot;倍になる。&quot;)"><Data
+      ss:Type="String">おモチの焼ける時間が、0.5倍になる。</Data></Cell>
+    <Cell ss:StyleID="s67" ss:Formula="=CONCAT(&quot;Sprite/Card/&quot;,RC[1])"><Data
+      ss:Type="String">Sprite/Card/MochiFillTimeChange</Data></Cell>
     <Cell ss:StyleID="s67"><Data ss:Type="String">MochiFillTimeChange</Data></Cell>
     <Cell ss:StyleID="s67"><Data ss:Type="Number">5</Data></Cell>
     <Cell ss:StyleID="s67"><Data ss:Type="Number">0.5</Data></Cell>
@@ -399,10 +450,12 @@
     <Cell ss:StyleID="s67" ss:Formula="=ROW()-5"><Data ss:Type="Number">22</Data></Cell>
     <Cell ss:StyleID="s67"><Data ss:Type="String">SeaSpeedDown1</Data></Cell>
     <Cell ss:StyleID="s67"><PhoneticText
-      xmlns="urn:schemas-microsoft-com:office:excel">ウミジョウショウソクドバイ</PhoneticText><Data
-      ss:Type="String">海の上昇速度0.95倍</Data></Cell>
-    <Cell ss:StyleID="s67"/>
-    <Cell ss:StyleID="s67"><Data ss:Type="String">Fake</Data></Cell>
+      xmlns="urn:schemas-microsoft-com:office:excel">ウミジョウショウソクド</PhoneticText><Data
+      ss:Type="String">海の上昇速度-</Data></Cell>
+    <Cell ss:StyleID="s67" ss:Formula="=CONCAT(&quot;温暖化を抑えたので、海の上昇速度が&quot;,RC[4],&quot;倍になる。&quot;)"><Data
+      ss:Type="String">温暖化を抑えたので、海の上昇速度が0.95倍になる。</Data></Cell>
+    <Cell ss:StyleID="s67" ss:Formula="=CONCAT(&quot;Sprite/Card/&quot;,RC[1])"><Data
+      ss:Type="String">Sprite/Card/SeaSpeedDown</Data></Cell>
     <Cell ss:StyleID="s67"><Data ss:Type="String">SeaSpeedDown</Data></Cell>
     <Cell ss:StyleID="s67"><Data ss:Type="Number">1</Data></Cell>
     <Cell ss:StyleID="s67"><Data ss:Type="Number">0.95</Data></Cell>
@@ -412,10 +465,12 @@
     <Cell ss:StyleID="s67" ss:Formula="=ROW()-5"><Data ss:Type="Number">23</Data></Cell>
     <Cell ss:StyleID="s67"><Data ss:Type="String">SeaSpeedDown2</Data></Cell>
     <Cell ss:StyleID="s67"><PhoneticText
-      xmlns="urn:schemas-microsoft-com:office:excel">ウミジョウショウソクドバイ</PhoneticText><Data
-      ss:Type="String">海の上昇速度0.9倍</Data></Cell>
-    <Cell ss:StyleID="s67"/>
-    <Cell ss:StyleID="s67"><Data ss:Type="String">Fake</Data></Cell>
+      xmlns="urn:schemas-microsoft-com:office:excel">ウミジョウショウソクド</PhoneticText><Data
+      ss:Type="String">海の上昇速度-</Data></Cell>
+    <Cell ss:StyleID="s67" ss:Formula="=CONCAT(&quot;温暖化を抑えたので、海の上昇速度が&quot;,RC[4],&quot;倍になる。&quot;)"><Data
+      ss:Type="String">温暖化を抑えたので、海の上昇速度が0.9倍になる。</Data></Cell>
+    <Cell ss:StyleID="s67" ss:Formula="=CONCAT(&quot;Sprite/Card/&quot;,RC[1])"><Data
+      ss:Type="String">Sprite/Card/SeaSpeedDown</Data></Cell>
     <Cell ss:StyleID="s67"><Data ss:Type="String">SeaSpeedDown</Data></Cell>
     <Cell ss:StyleID="s67"><Data ss:Type="Number">1</Data></Cell>
     <Cell ss:StyleID="s67"><Data ss:Type="Number">0.9</Data></Cell>
@@ -425,10 +480,12 @@
     <Cell ss:StyleID="s67" ss:Formula="=ROW()-5"><Data ss:Type="Number">24</Data></Cell>
     <Cell ss:StyleID="s67"><Data ss:Type="String">SeaSpeedDown3</Data></Cell>
     <Cell ss:StyleID="s67"><PhoneticText
-      xmlns="urn:schemas-microsoft-com:office:excel">ウミジョウショウソクドバイ</PhoneticText><Data
-      ss:Type="String">海の上昇速度0.85倍</Data></Cell>
-    <Cell ss:StyleID="s67"/>
-    <Cell ss:StyleID="s67"><Data ss:Type="String">Fake</Data></Cell>
+      xmlns="urn:schemas-microsoft-com:office:excel">ウミジョウショウソクド</PhoneticText><Data
+      ss:Type="String">海の上昇速度-</Data></Cell>
+    <Cell ss:StyleID="s67" ss:Formula="=CONCAT(&quot;温暖化を抑えたので、海の上昇速度が&quot;,RC[4],&quot;倍になる。&quot;)"><Data
+      ss:Type="String">温暖化を抑えたので、海の上昇速度が0.85倍になる。</Data></Cell>
+    <Cell ss:StyleID="s67" ss:Formula="=CONCAT(&quot;Sprite/Card/&quot;,RC[1])"><Data
+      ss:Type="String">Sprite/Card/SeaSpeedDown</Data></Cell>
     <Cell ss:StyleID="s67"><Data ss:Type="String">SeaSpeedDown</Data></Cell>
     <Cell ss:StyleID="s67"><Data ss:Type="Number">1</Data></Cell>
     <Cell ss:StyleID="s67"><Data ss:Type="Number">0.85</Data></Cell>
@@ -438,10 +495,12 @@
     <Cell ss:StyleID="s67" ss:Formula="=ROW()-5"><Data ss:Type="Number">25</Data></Cell>
     <Cell ss:StyleID="s67"><Data ss:Type="String">SeaSpeedDown4</Data></Cell>
     <Cell ss:StyleID="s67"><PhoneticText
-      xmlns="urn:schemas-microsoft-com:office:excel">ウミジョウショウソクドバイ</PhoneticText><Data
-      ss:Type="String">海の上昇速度0.8倍</Data></Cell>
-    <Cell ss:StyleID="s67"/>
-    <Cell ss:StyleID="s67"><Data ss:Type="String">Fake</Data></Cell>
+      xmlns="urn:schemas-microsoft-com:office:excel">ウミジョウショウソクド</PhoneticText><Data
+      ss:Type="String">海の上昇速度-</Data></Cell>
+    <Cell ss:StyleID="s67" ss:Formula="=CONCAT(&quot;温暖化を抑えたので、海の上昇速度が&quot;,RC[4],&quot;倍になる。&quot;)"><Data
+      ss:Type="String">温暖化を抑えたので、海の上昇速度が0.8倍になる。</Data></Cell>
+    <Cell ss:StyleID="s67" ss:Formula="=CONCAT(&quot;Sprite/Card/&quot;,RC[1])"><Data
+      ss:Type="String">Sprite/Card/SeaSpeedDown</Data></Cell>
     <Cell ss:StyleID="s67"><Data ss:Type="String">SeaSpeedDown</Data></Cell>
     <Cell ss:StyleID="s67"><Data ss:Type="Number">1</Data></Cell>
     <Cell ss:StyleID="s67"><Data ss:Type="Number">0.8</Data></Cell>
@@ -451,10 +510,12 @@
     <Cell ss:StyleID="s67" ss:Formula="=ROW()-5"><Data ss:Type="Number">26</Data></Cell>
     <Cell ss:StyleID="s67"><Data ss:Type="String">SeaSpeedDown5</Data></Cell>
     <Cell ss:StyleID="s67"><PhoneticText
-      xmlns="urn:schemas-microsoft-com:office:excel">ウミジョウショウソクドバイ</PhoneticText><Data
-      ss:Type="String">海の上昇速度0.75倍</Data></Cell>
-    <Cell ss:StyleID="s67"/>
-    <Cell ss:StyleID="s67"><Data ss:Type="String">Fake</Data></Cell>
+      xmlns="urn:schemas-microsoft-com:office:excel">ウミジョウショウソクド</PhoneticText><Data
+      ss:Type="String">海の上昇速度-</Data></Cell>
+    <Cell ss:StyleID="s67" ss:Formula="=CONCAT(&quot;温暖化を抑えたので、海の上昇速度が&quot;,RC[4],&quot;倍になる。&quot;)"><Data
+      ss:Type="String">温暖化を抑えたので、海の上昇速度が0.75倍になる。</Data></Cell>
+    <Cell ss:StyleID="s67" ss:Formula="=CONCAT(&quot;Sprite/Card/&quot;,RC[1])"><Data
+      ss:Type="String">Sprite/Card/SeaSpeedDown</Data></Cell>
     <Cell ss:StyleID="s67"><Data ss:Type="String">SeaSpeedDown</Data></Cell>
     <Cell ss:StyleID="s67"><Data ss:Type="Number">1</Data></Cell>
     <Cell ss:StyleID="s67"><Data ss:Type="Number">0.75</Data></Cell>
@@ -464,10 +525,12 @@
     <Cell ss:StyleID="s67" ss:Formula="=ROW()-5"><Data ss:Type="Number">27</Data></Cell>
     <Cell ss:StyleID="s67"><Data ss:Type="String">SeaSpeedDown6</Data></Cell>
     <Cell ss:StyleID="s67"><PhoneticText
-      xmlns="urn:schemas-microsoft-com:office:excel">ウミジョウショウソクドバイ</PhoneticText><Data
-      ss:Type="String">海の上昇速度0.7倍</Data></Cell>
-    <Cell ss:StyleID="s67"/>
-    <Cell ss:StyleID="s67"><Data ss:Type="String">Fake</Data></Cell>
+      xmlns="urn:schemas-microsoft-com:office:excel">ウミジョウショウソクド</PhoneticText><Data
+      ss:Type="String">海の上昇速度-</Data></Cell>
+    <Cell ss:StyleID="s67" ss:Formula="=CONCAT(&quot;温暖化を抑えたので、海の上昇速度が&quot;,RC[4],&quot;倍になる。&quot;)"><Data
+      ss:Type="String">温暖化を抑えたので、海の上昇速度が0.7倍になる。</Data></Cell>
+    <Cell ss:StyleID="s67" ss:Formula="=CONCAT(&quot;Sprite/Card/&quot;,RC[1])"><Data
+      ss:Type="String">Sprite/Card/SeaSpeedDown</Data></Cell>
     <Cell ss:StyleID="s67"><Data ss:Type="String">SeaSpeedDown</Data></Cell>
     <Cell ss:StyleID="s67"><Data ss:Type="Number">1</Data></Cell>
     <Cell ss:StyleID="s67"><Data ss:Type="Number">0.7</Data></Cell>
@@ -477,10 +540,12 @@
     <Cell ss:StyleID="s67" ss:Formula="=ROW()-5"><Data ss:Type="Number">28</Data></Cell>
     <Cell ss:StyleID="s67"><Data ss:Type="String">SeaSpeedDown7</Data></Cell>
     <Cell ss:StyleID="s67"><PhoneticText
-      xmlns="urn:schemas-microsoft-com:office:excel">ウミジョウショウソクドバイ</PhoneticText><Data
-      ss:Type="String">海の上昇速度0.65倍</Data></Cell>
-    <Cell ss:StyleID="s67"/>
-    <Cell ss:StyleID="s67"><Data ss:Type="String">Fake</Data></Cell>
+      xmlns="urn:schemas-microsoft-com:office:excel">ウミジョウショウソクド</PhoneticText><Data
+      ss:Type="String">海の上昇速度-</Data></Cell>
+    <Cell ss:StyleID="s67" ss:Formula="=CONCAT(&quot;温暖化を抑えたので、海の上昇速度が&quot;,RC[4],&quot;倍になる。&quot;)"><Data
+      ss:Type="String">温暖化を抑えたので、海の上昇速度が0.65倍になる。</Data></Cell>
+    <Cell ss:StyleID="s67" ss:Formula="=CONCAT(&quot;Sprite/Card/&quot;,RC[1])"><Data
+      ss:Type="String">Sprite/Card/SeaSpeedDown</Data></Cell>
     <Cell ss:StyleID="s67"><Data ss:Type="String">SeaSpeedDown</Data></Cell>
     <Cell ss:StyleID="s67"><Data ss:Type="Number">1</Data></Cell>
     <Cell ss:StyleID="s67"><Data ss:Type="Number">0.65</Data></Cell>
@@ -490,10 +555,12 @@
     <Cell ss:StyleID="s67" ss:Formula="=ROW()-5"><Data ss:Type="Number">29</Data></Cell>
     <Cell ss:StyleID="s67"><Data ss:Type="String">SeaSpeedDown8</Data></Cell>
     <Cell ss:StyleID="s67"><PhoneticText
-      xmlns="urn:schemas-microsoft-com:office:excel">ウミジョウショウソクドバイ</PhoneticText><Data
-      ss:Type="String">海の上昇速度0.6倍</Data></Cell>
-    <Cell ss:StyleID="s67"/>
-    <Cell ss:StyleID="s67"><Data ss:Type="String">Fake</Data></Cell>
+      xmlns="urn:schemas-microsoft-com:office:excel">ウミジョウショウソクド</PhoneticText><Data
+      ss:Type="String">海の上昇速度-</Data></Cell>
+    <Cell ss:StyleID="s67" ss:Formula="=CONCAT(&quot;温暖化を抑えたので、海の上昇速度が&quot;,RC[4],&quot;倍になる。&quot;)"><Data
+      ss:Type="String">温暖化を抑えたので、海の上昇速度が0.6倍になる。</Data></Cell>
+    <Cell ss:StyleID="s67" ss:Formula="=CONCAT(&quot;Sprite/Card/&quot;,RC[1])"><Data
+      ss:Type="String">Sprite/Card/SeaSpeedDown</Data></Cell>
     <Cell ss:StyleID="s67"><Data ss:Type="String">SeaSpeedDown</Data></Cell>
     <Cell ss:StyleID="s67"><Data ss:Type="Number">1</Data></Cell>
     <Cell ss:StyleID="s67"><Data ss:Type="Number">0.6</Data></Cell>
@@ -503,10 +570,12 @@
     <Cell ss:StyleID="s67" ss:Formula="=ROW()-5"><Data ss:Type="Number">30</Data></Cell>
     <Cell ss:StyleID="s67"><Data ss:Type="String">SeaSpeedDown9</Data></Cell>
     <Cell ss:StyleID="s67"><PhoneticText
-      xmlns="urn:schemas-microsoft-com:office:excel">ウミジョウショウソクドバイ</PhoneticText><Data
-      ss:Type="String">海の上昇速度0.55倍</Data></Cell>
-    <Cell ss:StyleID="s67"/>
-    <Cell ss:StyleID="s67"><Data ss:Type="String">Fake</Data></Cell>
+      xmlns="urn:schemas-microsoft-com:office:excel">ウミジョウショウソクド</PhoneticText><Data
+      ss:Type="String">海の上昇速度-</Data></Cell>
+    <Cell ss:StyleID="s67" ss:Formula="=CONCAT(&quot;温暖化を抑えたので、海の上昇速度が&quot;,RC[4],&quot;倍になる。&quot;)"><Data
+      ss:Type="String">温暖化を抑えたので、海の上昇速度が0.550000000000001倍になる。</Data></Cell>
+    <Cell ss:StyleID="s67" ss:Formula="=CONCAT(&quot;Sprite/Card/&quot;,RC[1])"><Data
+      ss:Type="String">Sprite/Card/SeaSpeedDown</Data></Cell>
     <Cell ss:StyleID="s67"><Data ss:Type="String">SeaSpeedDown</Data></Cell>
     <Cell ss:StyleID="s67"><Data ss:Type="Number">1</Data></Cell>
     <Cell ss:StyleID="s67"><Data ss:Type="Number">0.55000000000000104</Data></Cell>
@@ -516,14 +585,86 @@
     <Cell ss:StyleID="s67" ss:Formula="=ROW()-5"><Data ss:Type="Number">31</Data></Cell>
     <Cell ss:StyleID="s67"><Data ss:Type="String">SeaSpeedDown10</Data></Cell>
     <Cell ss:StyleID="s67"><PhoneticText
-      xmlns="urn:schemas-microsoft-com:office:excel">ウミジョウショウソクドバイ</PhoneticText><Data
-      ss:Type="String">海の上昇速度0.5倍</Data></Cell>
-    <Cell ss:StyleID="s67"/>
-    <Cell ss:StyleID="s67"><Data ss:Type="String">Fake</Data></Cell>
+      xmlns="urn:schemas-microsoft-com:office:excel">ウミジョウショウソクド</PhoneticText><Data
+      ss:Type="String">海の上昇速度-</Data></Cell>
+    <Cell ss:StyleID="s67" ss:Formula="=CONCAT(&quot;温暖化を抑えたので、海の上昇速度が&quot;,RC[4],&quot;倍になる。&quot;)"><Data
+      ss:Type="String">温暖化を抑えたので、海の上昇速度が0.500000000000001倍になる。</Data></Cell>
+    <Cell ss:StyleID="s67" ss:Formula="=CONCAT(&quot;Sprite/Card/&quot;,RC[1])"><Data
+      ss:Type="String">Sprite/Card/SeaSpeedDown</Data></Cell>
     <Cell ss:StyleID="s67"><Data ss:Type="String">SeaSpeedDown</Data></Cell>
     <Cell ss:StyleID="s67"><Data ss:Type="Number">1</Data></Cell>
     <Cell ss:StyleID="s67"><Data ss:Type="Number">0.500000000000001</Data></Cell>
     <Cell ss:StyleID="s67" ss:Formula="=R[-1]C[-7]"><Data ss:Type="String">SeaSpeedDown9</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s67" ss:Formula="=ROW()-5"><Data ss:Type="Number">32</Data></Cell>
+    <Cell ss:StyleID="s67"><Data ss:Type="String">Cat1</Data></Cell>
+    <Cell ss:StyleID="s67"><Data ss:Type="String">にゃ～ん</Data></Cell>
+    <Cell ss:StyleID="s67"><PhoneticText
+      xmlns="urn:schemas-microsoft-com:office:excel">ナイミ</PhoneticText><Data
+      ss:Type="String">ねこが鳴くよ。とくに意味はないよ</Data></Cell>
+    <Cell ss:StyleID="s67" ss:Formula="=CONCAT(&quot;Sprite/Card/&quot;,RC[1])"><Data
+      ss:Type="String">Sprite/Card/Cat</Data></Cell>
+    <Cell ss:StyleID="s67"><Data ss:Type="String">Cat</Data></Cell>
+    <Cell ss:StyleID="s67"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s67"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s67"/>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s67" ss:Formula="=ROW()-5"><Data ss:Type="Number">33</Data></Cell>
+    <Cell ss:StyleID="s67"><Data ss:Type="String">Cat2</Data></Cell>
+    <Cell ss:StyleID="s67"><Data ss:Type="String">にゃ～ん</Data></Cell>
+    <Cell ss:StyleID="s67"><PhoneticText
+      xmlns="urn:schemas-microsoft-com:office:excel">ナイミ</PhoneticText><Data
+      ss:Type="String">ねこが鳴くよ。とくに意味はないよ</Data></Cell>
+    <Cell ss:StyleID="s67" ss:Formula="=CONCAT(&quot;Sprite/Card/&quot;,RC[1])"><Data
+      ss:Type="String">Sprite/Card/Cat</Data></Cell>
+    <Cell ss:StyleID="s67"><Data ss:Type="String">Cat</Data></Cell>
+    <Cell ss:StyleID="s67"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s67"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s67" ss:Formula="=R[-1]C[-7]"><Data ss:Type="String">Cat1</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s67" ss:Formula="=ROW()-5"><Data ss:Type="Number">34</Data></Cell>
+    <Cell ss:StyleID="s67"><Data ss:Type="String">Cat3</Data></Cell>
+    <Cell ss:StyleID="s67"><Data ss:Type="String">にゃ～ん</Data></Cell>
+    <Cell ss:StyleID="s67"><PhoneticText
+      xmlns="urn:schemas-microsoft-com:office:excel">ナイミ</PhoneticText><Data
+      ss:Type="String">ねこが鳴くよ。とくに意味はないよ</Data></Cell>
+    <Cell ss:StyleID="s67" ss:Formula="=CONCAT(&quot;Sprite/Card/&quot;,RC[1])"><Data
+      ss:Type="String">Sprite/Card/Cat</Data></Cell>
+    <Cell ss:StyleID="s67"><Data ss:Type="String">Cat</Data></Cell>
+    <Cell ss:StyleID="s67"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s67"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s67" ss:Formula="=R[-1]C[-7]"><Data ss:Type="String">Cat2</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s67" ss:Formula="=ROW()-5"><Data ss:Type="Number">35</Data></Cell>
+    <Cell ss:StyleID="s67"><Data ss:Type="String">Cat4</Data></Cell>
+    <Cell ss:StyleID="s67"><Data ss:Type="String">にゃ～ん</Data></Cell>
+    <Cell ss:StyleID="s67"><PhoneticText
+      xmlns="urn:schemas-microsoft-com:office:excel">ナイミ</PhoneticText><Data
+      ss:Type="String">ねこが鳴くよ。とくに意味はないよ</Data></Cell>
+    <Cell ss:StyleID="s67" ss:Formula="=CONCAT(&quot;Sprite/Card/&quot;,RC[1])"><Data
+      ss:Type="String">Sprite/Card/Cat</Data></Cell>
+    <Cell ss:StyleID="s67"><Data ss:Type="String">Cat</Data></Cell>
+    <Cell ss:StyleID="s67"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s67"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s67" ss:Formula="=R[-1]C[-7]"><Data ss:Type="String">Cat3</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s67" ss:Formula="=ROW()-5"><Data ss:Type="Number">36</Data></Cell>
+    <Cell ss:StyleID="s67"><Data ss:Type="String">Cat5</Data></Cell>
+    <Cell ss:StyleID="s67"><Data ss:Type="String">にゃ～ん</Data></Cell>
+    <Cell ss:StyleID="s67"><PhoneticText
+      xmlns="urn:schemas-microsoft-com:office:excel">ナイミ</PhoneticText><Data
+      ss:Type="String">ねこが鳴くよ。とくに意味はないよ</Data></Cell>
+    <Cell ss:StyleID="s67" ss:Formula="=CONCAT(&quot;Sprite/Card/&quot;,RC[1])"><Data
+      ss:Type="String">Sprite/Card/Cat</Data></Cell>
+    <Cell ss:StyleID="s67"><Data ss:Type="String">Cat</Data></Cell>
+    <Cell ss:StyleID="s67"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s67"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s67" ss:Formula="=R[-1]C[-7]"><Data ss:Type="String">Cat4</Data></Cell>
    </Row>
   </Table>
   <WorksheetOptions xmlns="urn:schemas-microsoft-com:office:excel">
@@ -540,48 +681,22 @@
     <VerticalResolution>360</VerticalResolution>
    </Print>
    <TabColorIndex>13</TabColorIndex>
-   <Zoom>115</Zoom>
+   <Zoom>70</Zoom>
    <Selected/>
+   <TopRowVisible>26</TopRowVisible>
    <Panes>
     <Pane>
      <Number>3</Number>
-     <ActiveRow>4</ActiveRow>
+     <ActiveRow>36</ActiveRow>
      <ActiveCol>2</ActiveCol>
+     <RangeSelection>R37C3:R41C3</RangeSelection>
     </Pane>
    </Panes>
    <ProtectObjects>False</ProtectObjects>
    <ProtectScenarios>False</ProtectScenarios>
   </WorksheetOptions>
   <ConditionalFormatting xmlns="urn:schemas-microsoft-com:office:excel">
-   <Range>R5C1:R27C9,R28C1,R28C2:R36C2,R29C8:R36C8,R28C3:R28C9,R28C9:R36C9,R31C3:R32C3,R35C3:R36C3</Range>
-   <Condition>
-    <Value1>LEN(TRIM(RC))=0</Value1>
-    <Format Style='background:#E7E6E6'/>
-   </Condition>
-  </ConditionalFormatting>
-  <ConditionalFormatting xmlns="urn:schemas-microsoft-com:office:excel">
-   <Range>R29C1:R30C1,R29C3:R30C7,R29C9:R30C9,R33C3:R34C3</Range>
-   <Condition>
-    <Value1>LEN(TRIM(RC))=0</Value1>
-    <Format Style='background:#E7E6E6'/>
-   </Condition>
-  </ConditionalFormatting>
-  <ConditionalFormatting xmlns="urn:schemas-microsoft-com:office:excel">
-   <Range>R31C1:R32C1,R31C4:R32C7,R31C9:R32C9</Range>
-   <Condition>
-    <Value1>LEN(TRIM(RC))=0</Value1>
-    <Format Style='background:#E7E6E6'/>
-   </Condition>
-  </ConditionalFormatting>
-  <ConditionalFormatting xmlns="urn:schemas-microsoft-com:office:excel">
-   <Range>R33C1:R34C1,R33C4:R34C7,R33C9:R34C9</Range>
-   <Condition>
-    <Value1>LEN(TRIM(RC))=0</Value1>
-    <Format Style='background:#E7E6E6'/>
-   </Condition>
-  </ConditionalFormatting>
-  <ConditionalFormatting xmlns="urn:schemas-microsoft-com:office:excel">
-   <Range>R35C1:R36C1,R35C4:R36C7,R35C9:R36C9</Range>
+   <Range>R28C3:R28C9,R28C1:R36C2,R29C3:R36C8,R27C3:R36C4,R28C9:R41C9,R5C1:R27C9,R5C5:R41C5,R37C1:R41C8</Range>
    <Condition>
     <Value1>LEN(TRIM(RC))=0</Value1>
     <Format Style='background:#E7E6E6'/>

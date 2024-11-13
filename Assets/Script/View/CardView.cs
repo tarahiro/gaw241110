@@ -19,12 +19,14 @@ namespace gaw241110.view
 
         [SerializeField] TextMeshProUGUI _title;
         [SerializeField] TextMeshProUGUI _description;
+        [SerializeField] Image _image;
 
         public void Show(ISkillViewArgs args)
         {
             _args = args;
             _title.text = _args.DisplayName;
             _description.text = _args.Description;
+            _image.sprite = Resources.Load<Sprite>(_args.ImagePath);
         }
 
         void Start()

@@ -1243,8 +1243,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: "\u30EC\u30D9\u30EB\u30A2\u30C3\u30D7\uFF01"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: e1e3f78909fb0f748ac249bd6b7bd6b0, type: 2}
-  m_sharedMaterial: {fileID: -7559988500982086394, guid: e1e3f78909fb0f748ac249bd6b7bd6b0, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 704febe5573059544bc5af9cfc5e24df, type: 2}
+  m_sharedMaterial: {fileID: -6431554275634819938, guid: 704febe5573059544bc5af9cfc5e24df, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
