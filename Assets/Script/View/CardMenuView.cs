@@ -33,6 +33,7 @@ namespace gaw241110.view
         public void Show(List<ISkillViewArgs> args)
         {
             _cardRoot.SetActive(true);
+            SoundManager.PlaySE("Joy");
 
             _args = args;
             for (int i = 0; i < _viewList.Length; i++)

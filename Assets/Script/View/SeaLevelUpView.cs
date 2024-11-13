@@ -32,6 +32,7 @@ namespace gaw241110.view
         async UniTask Perform()
         {
            _gameObject.SetActive(true);
+            SoundManager.PlaySE("Alert");
             await UniTask.WaitForSeconds(2f);
             _gameObject.SetActive(false);
         }

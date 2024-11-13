@@ -29,6 +29,7 @@ namespace gaw241110.endgame.view
             {
                 if (Input.GetKeyDown(KeyCode.Z))
                 {
+                    EndGameViewUtil.StopSounds();
                     Decided.Invoke();
                 }
             }

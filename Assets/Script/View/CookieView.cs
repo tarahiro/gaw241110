@@ -22,6 +22,7 @@ namespace gaw241110.view
         {
             Log.DebugAssert(Clicked != null);
             Clicked.Invoke();
+            SoundManager.PlaySE("Click");
         }
 
         public void OnPause(PauseSignal signal)

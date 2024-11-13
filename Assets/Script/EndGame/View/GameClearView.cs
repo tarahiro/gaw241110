@@ -48,6 +48,7 @@ namespace gaw241110.endgame.view
         {
             _autoCamera.SetActive(false);
             await _gameClearFloater.Float();
+            EndGameViewUtil.StopSounds();
             await _screenFader.FadeIn(1f);
             await UniTask.WaitForSeconds(1f);
             _description.SetActive(true);

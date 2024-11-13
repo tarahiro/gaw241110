@@ -64,6 +64,10 @@ namespace gaw241110.model
                     seaParameter.MultiplySeaRiseSpeed(master.SkillArg);
                     break;
 
+                case "Cat":
+                    SoundManager.PlaySE("Cat");
+                    break;
+
                 default:
                     Log.DebugAssert(master.SkillKey + "В™СґНЁВµВ№ВєВс");
                     break;

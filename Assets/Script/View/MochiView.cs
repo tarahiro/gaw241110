@@ -54,6 +54,7 @@ namespace gaw241110.view
         {
             Log.DebugAssert(Clicked != null);
             Clicked.Invoke();
+            SoundManager.PlaySE("Click");
 
             _time = 0f;
             StopClickAccept();

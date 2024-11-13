@@ -27,12 +27,14 @@ namespace gaw241110.view
         public void Show()
         {
             _warningFader.Warning().Forget();
+            SoundManager.PlaySEWithLoop("Warning");
             _gameObject.SetActive(true);
         }
 
         public void End()
         {
             _warningFader.EndWarning();
+            SoundManager.StopLoopSE();
             _gameObject.SetActive(false);
         }
     }

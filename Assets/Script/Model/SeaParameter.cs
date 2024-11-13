@@ -48,6 +48,10 @@ namespace gaw241110.model
             _nextSeaLevelAltitude = NextSeaLevelAltitude();
             UpdateSeaRiseSpeed();
             SeaLevelUpped.Invoke();
+            if (_seaLevel == 1)
+            {
+                SoundManager.PlayBGM("Main");
+            }
         }
 
         public void MultiplySeaRiseSpeed(float coeff)

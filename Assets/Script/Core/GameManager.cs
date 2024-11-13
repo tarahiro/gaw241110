@@ -16,6 +16,7 @@ namespace gaw241110
         public void Initialize()
         {
             _seaManager.Activate();
+            SoundManager.PlayBGM("Sea", 1);
         }
 
         public void GameOver()
