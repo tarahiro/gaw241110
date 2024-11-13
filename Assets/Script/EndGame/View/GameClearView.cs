@@ -18,6 +18,7 @@ namespace gaw241110.endgame.view
 
         bool _isAcceptInput = false;
         [SerializeField] GameObject _description;
+        [SerializeField] GameObject _autoCamera;
 
         public event Action Decided;
 
@@ -45,6 +46,7 @@ namespace gaw241110.endgame.view
 
         async UniTask Enter()
         {
+            _autoCamera.SetActive(false);
             await _gameClearFloater.Float();
             await _screenFader.FadeIn(1f);
             await UniTask.WaitForSeconds(1f);

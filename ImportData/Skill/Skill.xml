@@ -112,9 +112,9 @@
    <Row ss:AutoFitHeight="0">
     <Cell ss:StyleID="s67" ss:Formula="=ROW()-5"><Data ss:Type="Number">0</Data></Cell>
     <Cell ss:StyleID="s67"><Data ss:Type="String">CookieHeightUp1</Data></Cell>
-    <Cell ss:StyleID="s67"><PhoneticText
-      xmlns="urn:schemas-microsoft-com:office:excel">タカバイ</PhoneticText><Data
-      ss:Type="String">クッキー高さ1.1倍</Data></Cell>
+    <Cell ss:StyleID="s67" ss:ArrayRange="RC"
+     ss:Formula="=CONCAT(&quot;クッキー高さ&quot;+TEXT(RC[5],tr)+&quot;倍&quot;)"><Data
+      ss:Type="Error">#VALUE!</Data></Cell>
     <Cell ss:StyleID="s67"/>
     <Cell ss:StyleID="s67"><Data ss:Type="String">Fake</Data></Cell>
     <Cell ss:StyleID="s67"><Data ss:Type="String">CookieHeightUp</Data></Cell>
@@ -542,11 +542,10 @@
    <TabColorIndex>13</TabColorIndex>
    <Zoom>115</Zoom>
    <Selected/>
-   <TopRowVisible>19</TopRowVisible>
    <Panes>
     <Pane>
      <Number>3</Number>
-     <ActiveRow>36</ActiveRow>
+     <ActiveRow>4</ActiveRow>
      <ActiveCol>2</ActiveCol>
     </Pane>
    </Panes>

@@ -4,6 +4,7 @@ using gaw241110.presenter;
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using Tarahiro;
 using TMPro;
 using UnityEngine;
@@ -17,6 +18,7 @@ namespace gaw241110.view
     {
         [SerializeField] Button _button;
         [SerializeField] Image _imageGuage;
+        [SerializeField] GameObject[] _effect;
         float _time = 0f;
         bool _isCountTime = false;
         float _fillTime;
@@ -28,6 +30,10 @@ namespace gaw241110.view
         {
             _button.onClick.AddListener(OnClick);
             StopClickAccept();
+            foreach (var effect in _effect)
+            {
+                effect.SetActive(false);
+            }
         }
 
         private void OnEnable()
@@ -37,7 +43,7 @@ namespace gaw241110.view
 
         void Update()
         {
-            if (_isCountTime && !_button.enabled)
+            if (_isCountTime && !_button.interactable)
             {
                 _time += Time.deltaTime;
                 UpdateImageGauge();
@@ -67,7 +73,11 @@ namespace gaw241110.view
 
         public void StopClickAccept()
         {
-            _button.enabled = false;
+            _button.interactable = false;
+            foreach (var effect in _effect)
+            {
+                effect.SetActive(false);
+            }
         }
 
         public void AcceptClick()
@@ -75,7 +85,11 @@ namespace gaw241110.view
             _isCountTime = true;
             if(_time > _fillTime)
             {
-                _button.enabled = true;
+                _button.interactable = true;
+                foreach (var effect in _effect)
+                {
+                    effect.SetActive(true);
+                }
             }
         }
 
@@ -90,7 +104,7 @@ namespace gaw241110.view
             _imageGuage.fillAmount = _time / _fillTime;
             if (_time > _fillTime)
             {
-                _button.enabled = true;
+                _button.interactable = true;
                 AcceptClick();
             }
 
