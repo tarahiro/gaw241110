@@ -8,6 +8,7 @@ using Zenject;
 using gaw241110;
 using gaw241110.endgame;
 using gaw241110.endgame.presenter;
+using UnityEngine.UI;
 
 namespace gaw241110.endgame.view
 {
@@ -16,9 +17,9 @@ namespace gaw241110.endgame.view
         [Inject] IScreenFader _screenFader;
         [Inject] IGameClearFloater _gameClearFloater;
 
-        bool _isAcceptInput = false;
         [SerializeField] GameObject _description;
         [SerializeField] GameObject _autoCamera;
+        [SerializeField] Button _button;
 
         public event Action Decided;
 
@@ -27,17 +28,6 @@ namespace gaw241110.endgame.view
             Hide();
         }
 
-        public void Update()
-        {
-            if (_isAcceptInput)
-            {
-                if (Input.GetKeyDown(KeyCode.Z))
-                {
-                    Decided.Invoke();
-                }
-            }
-            
-        }
 
         public void Show()
         {
@@ -63,11 +53,16 @@ namespace gaw241110.endgame.view
 
         public void AcceptInput()
         {
-            _isAcceptInput = true;
+            _button.interactable = true;
         }
         public void StopAcceptInput()
         {
-            _isAcceptInput = false;
+            _button.interactable = false;
+        }
+
+        public void OnClick()
+        {
+            Decided.Invoke();
         }
 
     }

@@ -21,7 +21,9 @@ namespace gaw241110.inject
     {
         public override void InstallBindings()
         {
+#if ENABLE_DEBUG
             Container.BindInterfacesTo<DebugModelTicker>().AsSingle();
+#endif
 
             Container.BindInterfacesTo<GameClearFloater>().FromComponentInHierarchy().AsSingle();
             Container.BindInterfacesTo<ScreenFader>().FromComponentInHierarchy().AsSingle();

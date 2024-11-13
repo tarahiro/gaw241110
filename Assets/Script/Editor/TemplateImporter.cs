@@ -10,6 +10,7 @@ using gaw241110.model.masterData;
 
 namespace gaw241110.Editor
 {
+#if UNITY_EDITOR
     //---プロジェクト作成時にやること---//
     //namespaceの"project"部分を変更。（gaw[yymmdd]とか）
     //アセンブリ構成に応じて、using部分を追加（gaw[yymmdd].modelとか）
@@ -75,4 +76,5 @@ namespace gaw241110.Editor
             XmlImporter.ExportOrderedDictionary<TemplateMasterData, TemplateMasterData.Record, IMasterDataRecord<ITemplateMaster>>(TemplateMasterData.c_DataPath, TemplateDataList);
         }
     }
+#endif
 }

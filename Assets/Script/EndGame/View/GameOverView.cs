@@ -8,13 +8,14 @@ using Zenject;
 using gaw241110;
 using gaw241110.endgame;
 using gaw241110.endgame.presenter;
+using UnityEngine.UI;
 
 namespace gaw241110.endgame.view
 {
     public class GameOverView : MonoBehaviour, IEndGameView
     {
-        bool _isAcceptInput = false;
         [SerializeField] GameObject _description;
+        [SerializeField] Button _button;
 
         public event Action Decided;
 
@@ -23,18 +24,6 @@ namespace gaw241110.endgame.view
             Hide();
         }
 
-        public void Update()
-        {
-            if (_isAcceptInput)
-            {
-                if (Input.GetKeyDown(KeyCode.Z))
-                {
-                    EndGameViewUtil.StopSounds();
-                    Decided.Invoke();
-                }
-            }
-            
-        }
 
         public void Show()
         {
@@ -48,11 +37,18 @@ namespace gaw241110.endgame.view
 
         public void AcceptInput()
         {
-            _isAcceptInput = true;
+            _button.interactable = true;
         }
         public void StopAcceptInput()
         {
-            _isAcceptInput = false;
+            _button.interactable = false;
+        }
+
+        public void OnClick()
+        {
+            EndGameViewUtil.StopSounds();
+            Decided.Invoke();
+
         }
 
     }
